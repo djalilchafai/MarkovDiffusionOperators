@@ -30,3 +30,7 @@ definitions the frozen statements depend on). Each stage is attacked by an indep
 (not author-approved).**
 
 See `PLAN.md`, `DECISIONS.md`, `CORRESPONDENCE.md`.
+
+## License
+
+Copyright 2026 Djalil Chafaï. Licensed under the Apache License, Version 2.0 (see `LICENSE`), the same license as Mathlib.
