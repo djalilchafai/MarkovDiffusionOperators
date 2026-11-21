@@ -5,6 +5,33 @@ Book = Bakry–Gentil–Ledoux, Ch. 3–5 (paraphrases only).  Hypotheses used: 
 no `sorry`.  `Theory/Tests.lean` proves that each regularity structure holds for the trivial
 compact triple (so none is contradictory or vacuous there).
 
+## Net status (round 32, November 2026) — read this first
+
+The rest of this file is a chronological log: earlier sections are annotated, never deleted, so many "open" /
+"conditional" lines below are historical.  This section is the current summary (book-to-Lean table: `CORRESPONDENCE.md`).
+
+**Proved for every `FullTriple`, no regularity structure:**
+* Prop 3.3.16 (i)–(viii) and the direct half of Prop 3.3.17 (`gamma_limits`, `hessE*`, `gamma2E*`, `hessE_eq_Hess`, `Γ₂_ext_eq`, `ibp_of_domain`).
+* Converse of Prop 3.3.17: for complete triples with `CD(ρ,n)` (`mem_domain_of_Γ₂_direct`), and for `CD(ρ,n)`, `n < ∞` (`mem_domain_of_Γ₂_finite`).
+* Thm 3.3.18 and Cor 3.3.19 for `ρ ≥ 0` (`strongInterpolation`, `strong_gradient_bound_unconditional`, `gradient_bound_unconditional`):
+  G1' discharged (round 15), the weak form by Jensen (round 16).  G1 `GradientInterpolation` is not a book statement and is no longer needed.
+* Thm 3.3.23 for complete triples with `ρ ≥ 0` (`conservative_of_complete_unconditional`).
+* Prop 5.7.1 (`logSobolev_unconditional`, `logSobolev_domain_unconditional`; probability measure, `ρ > 0`): G3 discharged (round 16).
+* Thm 5.7.4, `1 < n < ∞`, finite measure (`logSobolev_dim_unconditional`): G3' discharged (round 16).
+
+**Instances, unconditional:** circle, zonal `S³`, OU (bounded and full), Lebesgue on ℝ and ℝᵈ, `gaussRdFull`, round sphere `S^{n-1}`
+(`sphereFullU`, F8 proved in round 32), Gibbs `e^{-V}dx` on ℝ and ℝᵈ for every smooth `V` with `e^{-V}` integrable (`WeakHypo`, `F8` proved),
+elliptic/Riemannian chart data; non-complete `goFullTriple` (`CD(3,4)`).
+
+**Open (exact):**
+* `ρ < 0` for Thm 3.3.18 / Cor 3.3.19 and hence Thm 3.3.23 (the `ε`-form needs the error term `ρ ε ∫ P_s h`).
+* Thm 5.7.4 for `n = 1`, and optimality of constants.
+* Converse of Prop 3.3.17 for `n = ∞` on non-complete triples (ERRATA R24-B-1, R29-P-2).
+* `Core2` (ESA of `L²` on `𝒜₀`, implicit in BGL, ERRATA R15-1): open for general smooth `V` and for the hyperbolic plane; it FAILS for the
+  non-complete `goFullTriple` and for the Gegenbauer transcriptions `λ = 2, 5/2`; the threshold `λ ≥ 7/2` is heuristic only.  No longer needed for the converse of 3.3.17 on complete triples.
+* Stochastic layer (beyond BGL Ch. 3–5): unconditional `MarkovProcessBridge` for non-Gaussian Gibbs/elliptic/Riemannian triples,
+  pointwise mass one without tightness, multi-chart manifolds; see the round 17–32 sections.
+
 ## Proved unconditionally
 
 | File | Statement |
@@ -18,6 +45,7 @@ compact triple (so none is contradictory or vacuous there).
 ## Conditional (explicit hypothesis structures, never axioms)
 
 ### G1.  `FullTriple.GradientInterpolation T`  (Cor. 3.3.19 / proof of Thm 3.3.18, `GradientBound.lean`)
+[ANNOTATION net status R32: SUPERSEDED. Cor 3.3.19 and Thm 3.3.18 are proved for every `FullTriple` with `ρ ≥ 0` (rounds 15–16); `GradientInterpolation` is no longer needed.]
 Proved from it (`gradient_integrated`, `gradient_bound`): for `f ∈ 𝒜₀`, `t ≥ 0`,
 `Γ(P_t f) ≤ e^{-2ρt} P_t(Γ f)` a.e., under `CD(ρ,n)` (any `n`).  Everything but the differentiation of
 `Φ(s) = ∫ P_s h · Γ(P_{t-s} f)` is proved (Gronwall step, end points `P_0 = id`, symmetry of `P_t`,
@@ -37,6 +65,7 @@ inequality (3.3.6) `Γ(Γ f) ≤ 4(Γ₂(f)-ρΓ(f))Γ(f)` is PROVED on `𝒜` f
 structure `StrongInterpolation` (discharged for compact triples, OU), and for Lebesgue by the heat kernel.
 
 ### G3.  `FullTriple.EntropyInterpolation T`  (de Bruijn + `Φ''`; Prop. 5.7.1, §5.5, `LogSobolev.lean`)
+[ANNOTATION net status R32: SUPERSEDED. G3 is discharged by `FullTriple.entropyInterpolation` (round 16) for finite-measure full triples with `ρ ≥ 0`.]
 Proved from it (`ent_le_fisher`, `ent_sq_add_le`, `logSobolev_of_CD_infty`, `logSobolev_extend_domain`):
 `CD(ρ,n)`, `ρ>0`, probability ⇒ `T.LS (1/ρ) 0` (`Ent(f²) ≤ (2/ρ)ℰ(f)`) on `𝒜₀` and on `𝒟(ℰ)`.
 Proved there: `g_s = ε+P_sφ ∈ [ε,ε+M]`, `Γ(log g)·g = Γ(g)/g` (F6 with a smooth cutoff of `log`),
@@ -50,6 +79,7 @@ inequality, the `f²` and `ε → 0` steps, limit at `∞` (from the gap).
 
 ## Not done / documented only
 
+* [ANNOTATION net status R32: the gradient-bound gap below is CLOSED for `ρ ≥ 0` by `hasGradientBound_unconditional` / `conservative_of_complete_unconditional` (round 16).]
 * **G4.  Mass conservation, infinite `μ` (Thm 3.3.23): DONE modulo the gradient bound (round 11).**  Finite `μ`: ESA alone
   (`ESAOne`).  Infinite `μ`: `Theory/Conservation/{Hilbert,ExtAlgebra,Estimate,Mass,Finite,Compact}.lean`.
   Completeness is `DiffusionTriple.IsComplete` (`Frozen/Complete.lean`).  Proved (no sorry, standard axioms):
@@ -63,6 +93,7 @@ inequality, the `f²` and `ε → 0` steps, limit at `∞` (from the gap).
   and the theorem has genuine non-compact applications: `ouFull_conservative_of_complete`,
   `lebesgue_conservative_of_complete` (infinite measure; weak gradient bound from the heat kernel,
   `lebesgue_hasGradientBound`).  The book's `√Γ ξ ∈ L¹` step is replaced by `2|η|√Γη ≤ η²+Γη`, ξ=η².
+* [ANNOTATION net status R32: G5 is CLOSED except the converse of 3.3.17 for `n = ∞` on non-complete triples (rounds 14–24); see the net status section.]
 * **G5.  Props. 3.3.16 (i),(iii)–(viii) and 3.3.17 as operator statements.**  PARTIALLY DONE (round 12,
   `Theory/Extension/*`): `FullTriple.gamma_limits` = Prop 3.3.16 (i), (ii), (iii) for `Γ` and `Γ₂` (extension to `𝒟(L)` as
   `L¹`-limit along any graph-convergent sequence of test functions, independence of the sequence, `∫Γ₂(u) = ‖Lu‖²`,
@@ -80,6 +111,7 @@ inequality, the `f²` and `ε → 0` steps, limit at `∞` (from the gap).
   **Round 15 (`Extension/Converse.lean`):** the converse of 3.3.17 is proved CONDITIONALLY on the named Prop `FullTriple.Core2` (`𝒜₀` core for `L²`, implicit in the book, ERRATA R15-1); unconditional converse OPEN.
   **Round 15 update (gap closure after the independent audit; `Extension/{SeqLin,HessExtLin,Gamma2ELin,GammaELin}.lean`, `STATEMENTS_R15_Gaps.md`, `BGL/AUDIT_R15_GAPS_SELF.md`, ERRATA E5):** added bilinearity/boundedness/identification of `hessE` (3.3.16 (iv)), the general 2nd/3rd statements of (v), bilinearity/symmetry/bound of `gamma2E` and `gammaE`, `gammaE` Cauchy–Schwarz, and the link `GG2 a a = G2cls a` with `Γ₂_ext_eq_gamma2E`.  Still open: converse of 3.3.17 only.
   Note Remark 3.3.15 (CD from `𝒜₀` to `𝒜`) is not needed: the frozen `FullTriple.CD` is already stated on all of `𝒜`.
+* [ANNOTATION net status R32: now UNCONDITIONAL for every finite-measure `FullTriple` (`logSobolev_dim_unconditional`, round 16). Still open: `n = 1`, optimality.]
 * **Finite-dimensional LSI constant `(n-1)/(ρ n)` (Thm 5.7.4, `1 < n < ∞`): DONE (round 14), conditional on a named structure.**
   `Theory/LogSobolevDimChain.lean`: (5.7.6) `Γ₂_exp`, (5.7.7)-(5.7.12) `integral_exp_L_Γ`, `integral_exp_sq_L`,
   `integral_exp_Γ₂_ge`, `integral_exp_Γ₂_ge'` (for `g ∈ 𝒜₀` **under the extra hypothesis `e^{g/2} ∈ 𝒜₀`**, which the book obtains from Prop. 3.3.17 without stating it; discharged on compact triples).  `Theory/LogSobolevDim.lean`:
@@ -90,6 +122,7 @@ inequality, the `f²` and `ε → 0` steps, limit at `∞` (from the gap).
   the extension needs the operator-level Props 3.3.16 (iv)-(viii)/3.3.17 (G5).  Not done: `n = 1` (torus, p. 272), optimality.
 
 ## Update: compact triples (`Theory/Compact/`)
+[ANNOTATION net status R32: the last sentence ("G1/G3 remain open for non-compact full triples") is SUPERSEDED: G3 is discharged and G1 is no longer needed (round 16).]
 
 `compact_gradientInterpolation` and `compact_entropyInterpolation` prove G1 and G3 as theorems for every
 `CompactTriple` (`𝒜 = 𝒜₀`); the gradient bound, Fisher decay and (for `ρ>0`) the log-Sobolev inequality are therefore
@@ -112,6 +145,7 @@ G1/G3 remain open (hypotheses) for non-compact full triples.
 | Prop 3.3.16 (i)–(iii) for `Γ`, `Γ₂` | `FullTriple.gamma_limits` (`Extension/Main`) | proved (see G5 for what is missing) |
 
 **Not done (exact gaps):**
+[ANNOTATION net status R32: of the gaps below only `ρ < 0` remains open.]
 * **Update (round 15, `Theory/Interp`):** `StrongInterpolation` IS now discharged for every `FullTriple` (`FullTriple.strongInterpolation`, Lemmas 3.3.20–3.3.21).  The text below is the earlier state; what remains open is `GradientInterpolation` (not a book statement), `EntropyInterpolation` and `FiniteDimInterpolation` (and the weak Cor. 3.3.19 via Jensen).
 * `StrongInterpolation` / `GradientInterpolation` / `EntropyInterpolation` for a *general non-compact* `FullTriple`
   (they remained hypotheses at the time of writing; discharged only for compact triples and OU, plus `HasGradientBound` and the strong bound for
@@ -140,6 +174,7 @@ Proved (standard axioms only), general (any Diffusion Triple, abstract `𝒜`): 
 no F8, no gradient bound), and `gibbsFull : FullTriple ℝ` (under `WeakHypo` and `GibbsData.F8`) with `gibbsFull_CD`,
 `gibbs_CD_pointwise`, `gibbsFull_poincare`.
 `gibbsFull_logSobolev`, `gibbsFull_gradient_bound` are conditional on `EntropyInterpolation` / `GradientInterpolation`.
+[ANNOTATION net status R32: (c) below is also CLOSED (rounds 15–16): LSI and gradient bounds for Gibbs are unconditional (`gibbsFull_logSobolev_unconditional`, `gibbsFull_gradient_bound_unconditional`).]
 **ROUND 15 UPDATE: (a) and (b) below are now PROVED for every `GibbsData` (`GibbsData.weakHypo`, `GibbsData.f8`; files `Instances/Gibbs/Reg*.lean`, statements in `STATEMENTS_R15_Reg.md`); unconditional corollaries `gibbsFull_unconditional`, `gibbsFull_CD_unconditional`, `gibbs_poincare_unconditional`, etc. in `RegMain.lean`. Only (c) remains open.**
 **Exact missing inputs (historical, before round 15):** (a) weak hypo-ellipticity (`GibbsData.WeakHypo`: elliptic regularity of `f'' - V' f' = λ f`, λ = 0, 1 used; the book
 cites Sect. 1.12 without proof); (b) F8 (smoothness of the Friedrichs semigroup, Def 3.3.1 (viii), also unproved in the
