@@ -1,7 +1,7 @@
-# HILBERT_STATUS (Phase 3, `MarkovTriple/Hilbert/`)
+# HILBERT_STATUS (Phase 3, `MarkovDiffusionOperators/Hilbert/`)
 
 Status legend: PORTED = text ported with only mechanical changes (header, namespace
-`CutoffRigidity.Riemann.Diff` -> `MarkovTriple.Hilbert`, `module`/`public` removed); NEW = written here;
+`CutoffRigidity.Riemann.Diff` -> `MarkovDiffusionOperators.Hilbert`, `module`/`public` removed); NEW = written here;
 MERGED = two source copies replaced by one. Everything builds with `lake build` (Lean v4.35.0-rc2);
 no `sorry`, no `axiom`, no `maxHeartbeats`; every file <= 530 lines; `Hilbert/AxiomCheck.lean` shows
 only `propext, Classical.choice, Quot.sound` for all main theorems. `Frozen/`, `Sanity/`,
@@ -25,7 +25,7 @@ Sources: CR = `cutoff-rigidity-diffusions` (`CutoffRigidity/Riemann/*`), GP = `g
 | **(1)** existence | -- | `Existence.lean` | NEW | `FormData.exists_semigroup` |
 | **(2)** spectral gap <=> L2 decay | -- | `SpectralGap.lean` | NEW | `hasSpectralGap_iff_hasExpDecay`; via resolvents and Euler scheme (Yosida bound), no `d/dt` |
 | Beurling-Deny (cone invariance) | CR `DiffMarkov.fixed_of_comparison` (Q-level restatement) | `BeurlingDeny.lean` | NEW | works on `FormData.Q/E` directly |
-| `L^2(mu)` form data of a `MarkovTriple`; well-definedness of `A[f] = -[Lf]` on classes | -- | `TripleForm.lean` | NEW | via Cauchy-Schwarz for `q(f,g)=∫Γ(f,g)` + density |
+| `L^2(mu)` form data of a `MarkovDiffusionOperators`; well-definedness of `A[f] = -[Lf]` on classes | -- | `TripleForm.lean` | NEW | via Cauchy-Schwarz for `q(f,g)=∫Γ(f,g)` + density |
 | **(3)** bridge to frozen `IsSemigroupOf` | -- | `Bridge.lean` | NEW | `isSemigroupOf_tripleSemigroup` (needs `IsMarkovianForm`, see below) |
 | `esa` => generator = closure of `L|A0` | -- | `Closure.lean` | NEW | `FullMarkovTriple.generator_graph_eq_closure` |
 | checkable criterion for `IsMarkovianForm` | CR `contraction_mem` generalised (approximation on the core) | `MarkovCriterion.lean` | NEW | `exists_contraction_of_approx`, `isMarkovianForm_of_approx` |
@@ -46,7 +46,7 @@ Sources: CR = `cutoff-rigidity-diffusions` (`CutoffRigidity/Riemann/*`), GP = `g
 `S.HasExpDecay λ`: `‖P_t u‖ ≤ e^{-λ t}‖u‖` for `u ⟂ N`, `t ≥ 0`. For `0 ≤ λ` they are equivalent
 (`hasSpectralGap_iff_hasExpDecay`).
 
-(3) `isSemigroupOf_tripleSemigroup (T : MarkovTriple E) (hM : IsMarkovianForm T) :
+(3) `isSemigroupOf_tripleSemigroup (T : MarkovDiffusionOperators E) (hM : IsMarkovianForm T) :
 IsSemigroupOf T (tripleSemigroup T)`, where `tripleSemigroup T = (formData T).semigroup` and
 `IsMarkovianForm T := ∀ u ∈ Q, ∃ v ∈ Q, v = |u| ∧ E(v,v) ≤ E(u,u)`
 (first Beurling-Deny criterion for the closure of `ℰ(f)=∫Γ f f` on `𝒜₀`).
@@ -57,7 +57,7 @@ Uses `hM` only for: positivity preservation.
 ## What is MISSING for the bridge, exactly
 
 **The only missing hypothesis is positivity preservation of `P_t`, i.e. the Markov property of the
-form.** It does not follow from the fields of `MarkovTriple`/`FullMarkovTriple`: `diffusion` only
+form.** It does not follow from the fields of `MarkovDiffusionOperators`/`FullMarkovTriple`: `diffusion` only
 applies when `ψ(f) ∈ 𝒜₀` (no stability of `𝒜₀` under smooth `ψ`), so `|f|`, `f∧1` or `ψ_ε(f)` are
 not known to lie in the form domain, and `FullMarkovTriple.esa`/`ibp_A`/`semigroup_stable` do not
 supply it (`semigroup_stable` is itself conditional on `IsSemigroupOf`). Hypothesis offered:
@@ -83,7 +83,7 @@ supply it (`semigroup_stable` is itself conditional on `IsSemigroupOf`). Hypothe
    but unused by the bridge (replaced by the Q-level `BeurlingDeny.lean`).
 5. The spectral-gap notions are stated relative to `N = ker G` (orthogonality to fixed points), not
    relative to constants; identifying `N` with constants (ergodicity) is left to users.
-6. `FullMarkovTriple.generator_graph_eq_closure` is declared in namespace `MarkovTriple.Hilbert`
-   (full name `MarkovTriple.Hilbert.FullMarkovTriple.generator_graph_eq_closure`), so `F.generator_graph_eq_closure`
+6. `FullMarkovTriple.generator_graph_eq_closure` is declared in namespace `MarkovDiffusionOperators.Hilbert`
+   (full name `MarkovDiffusionOperators.Hilbert.FullMarkovTriple.generator_graph_eq_closure`), so `F.generator_graph_eq_closure`
    dot notation does not work.
 7. All of `Hilbert/` needs `CompleteSpace H` (true for `Lp`); `FormData` needs `D` dense.

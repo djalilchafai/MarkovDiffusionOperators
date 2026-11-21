@@ -32,5 +32,5 @@ Branch ad7e99d merged on main dc4119a, then G2 (2307284) merged for the probe (o
    `#print axioms` on the FullTriple def, CD and not-complete theorems: [propext, Classical.choice, Quot.sound] each. G2's own AxiomCheck (goFull, goFull_CD, goFull_not_complete) is also clean.
 
 ## Findings
-- LOW (doc): STATEMENTS_R23_G1.md lists `esaProp_of_orth` in namespace ...GegenbauerOpen.ESA, but it lives in `MarkovTriple.BGL.DiffusionTriple` (Main.lean:23-27). Cosmetic.
+- LOW (doc): STATEMENTS_R23_G1.md lists `esaProp_of_orth` in namespace ...GegenbauerOpen.ESA, but it lives in `MarkovDiffusionOperators.BGL.DiffusionTriple` (Main.lean:23-27). Cosmetic.
 - INFO: I did not re-derive Prim.lean/Regularity.lean (du Bois-Reymond, ~520 lines) line by line; their statements (`weak_regular` hypothesis/conclusion, checked against goL and the weak identity) are consistent and Lean-checked with clean axioms, so soundness rests on the kernel.

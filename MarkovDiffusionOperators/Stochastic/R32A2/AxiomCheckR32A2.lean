@@ -1,0 +1,12 @@
+import MarkovDiffusionOperators.Stochastic.R32A2.Gibbs
+
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.semigroup_comparison
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.rd_isFellerC0_of_lyapunov
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.Lr_hL_le
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.cut_bounds_lin
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.gibbsRdFull_isFellerC0_of_linGrowth
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.gibbsRdFull_isFellerC0_of_hessBdd
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.gibbsRdFull_bridge_of_linGrowth
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.gibbsRdFull_bridge_of_hessBdd
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.cosData_isFellerC0
+#print axioms MarkovDiffusionOperators.Stochastic.R32A2.cosData_bridge

@@ -1,0 +1,10 @@
+import MarkovDiffusionOperators.Stochastic.R29P.Tight
+import MarkovDiffusionOperators.Stochastic.R29P.OneD
+
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.fellerKernelInf_tight_of_univ_eq_one
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.fellerKernelInf_univ_eq_one_of_tight
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.fellerKernelInf_univ_eq_one_iff_tight
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.fellerKernelInf_univ_eq_one_of_compactSpace
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.fellerKernelInf_deficit_noncompact
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.oneD_boundary_identity
+#print axioms MarkovDiffusionOperators.Stochastic.R29P.oneD_boundary_bound

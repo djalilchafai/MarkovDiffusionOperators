@@ -1,0 +1,5 @@
+import MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Final
+
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.goFullTriple
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.goFullTriple_CD
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.goFullTriple_not_complete

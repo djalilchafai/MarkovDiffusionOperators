@@ -1,7 +1,7 @@
 # AUDIT_OU (round 5, hostile)
 
-Scope: `Sanity/OU/*`, `Frozen/{MarkovTriple,FullMarkovTriple,CD,CDFull,Ergodic,Semigroup}`.
-Audit file: `MarkovTriple/Audit/OUAudit.lean` (not imported by root; compiles; the axiom walk takes ~2 min).
+Scope: `Sanity/OU/*`, `Frozen/{MarkovDiffusionOperators,FullMarkovTriple,CD,CDFull,Ergodic,Semigroup}`.
+Audit file: `MarkovDiffusionOperators/Audit/OUAudit.lean` (not imported by root; compiles; the axiom walk takes ~2 min).
 
 ## Verdicts
 1. **Fields of `ouFull` are not satisfied by junk. GENUINE.**
@@ -33,7 +33,7 @@ Audit file: `MarkovTriple/Audit/OUAudit.lean` (not imported by root; compiles; t
    for the hypothesised `P` only; existence of such `P` is `Hilbert.isSemigroupOf_full` (generic), so the field is not vacuous.
 5. **Banned constructs:** grep over Sanity/OU/*, Sanity/Circle.lean, Sanity/CircleFull.lean, Frozen/*: no `sorry`, `axiom`,
    `native_decide`, `set_option`, `unsafe`, `implemented_by`, `@[extern]`, `opaque`, `admit`, macros/syntax. Only `#print axioms` lines.
-   Axiom walk (228 non-internal constants in modules `MarkovTriple.Sanity.OU.*`): 0 with non-standard axioms, 0 unsafe/partial/opaque/axiom.
+   Axiom walk (228 non-internal constants in modules `MarkovDiffusionOperators.Sanity.OU.*`): 0 with non-standard axioms, 0 unsafe/partial/opaque/axiom.
    `ouFull`, `ouFull_CDFull`, `ou_ergodic`, `ou_poincare`: `[propext, Classical.choice, Quot.sound]`.
 6. **Non-vacuity chain.** Audit file proves/compiles: `Γ(id,id) ≡ 1`; `L id = -x`; `Γ₂(id) = 1 = ρΓ(id)` (CD(1,∞) tight on id);
    `ou_poincare_unfolded`. Also `ouFull_Γ_ne_zero` in library. Numerics above agree (Var(id) = 1 ≤ E(id) = 1 in the limit).

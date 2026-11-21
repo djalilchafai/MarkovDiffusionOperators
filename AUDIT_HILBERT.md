@@ -1,8 +1,8 @@
-# AUDIT_HILBERT (hostile audit of `MarkovTriple/Hilbert/`)
+# AUDIT_HILBERT (hostile audit of `MarkovDiffusionOperators/Hilbert/`)
 
-Scope: `Hilbert/*.lean` (20 files), `Frozen/{Semigroup,MarkovTriple,FullMarkovTriple}.lean`.
-Auditor files (not imported by root): `MarkovTriple/Audit/HilbertAxioms.lean`,
-`MarkovTriple/Audit/HilbertDiagonal.lean`. Sources cloned shallowly (outside the project) into the
+Scope: `Hilbert/*.lean` (20 files), `Frozen/{Semigroup,MarkovDiffusionOperators,FullMarkovTriple}.lean`.
+Auditor files (not imported by root): `MarkovDiffusionOperators/Audit/HilbertAxioms.lean`,
+`MarkovDiffusionOperators/Audit/HilbertDiagonal.lean`. Sources cloned shallowly (outside the project) into the
 scratchpad: `src_cr/repo` (cutoff-rigidity-diffusions), `src_gp/repo` (ginibre-poincare).
 
 ## Verdict summary
@@ -17,8 +17,8 @@ scratchpad: `src_cr/repo` (cutoff-rigidity-diffusions), `src_gp/repo` (ginibre-p
 | (e) axioms | PASS: 433 public constants, 0 offenders. |
 
 ## (e) Axioms
-`lake env lean MarkovTriple/Audit/HilbertAxioms.lean` walks `env.constants` for every non-private,
-non-internal constant whose module is under `MarkovTriple.Hilbert` (332 theorems, 89 defs, 12 other =
+`lake env lean MarkovDiffusionOperators/Audit/HilbertAxioms.lean` walks `env.constants` for every non-private,
+non-internal constant whose module is under `MarkovDiffusionOperators.Hilbert` (332 theorems, 89 defs, 12 other =
 structures/ctors/recursors); result: `checked 433 constants ... offenders: []`, i.e. only
 `propext, Classical.choice, Quot.sound` (no `sorryAx`, no `ofReduceBool`). Also `grep`: no `sorry`,
 `axiom`, `native_decide`, `opaque`, `unsafe`, `implemented_by`, `maxHeartbeats` in `Hilbert/`; only
@@ -82,7 +82,7 @@ standard proof and is axiom-clean.
 Why it should not be derivable: positivity of the Friedrichs semigroup is equivalent (Beurling-Deny)
 to `u in Q => |u| in Q, E(|u|) <= E(u)` for the *closure* of the pre-form on `A0`. The fields give
 the chain rule only for `psi(f) in A0`; BGL Def 3.1.8 additionally has `A0` stable under smooth
-`psi`, which gives `psi_eps(f) in A0` and hence Markov. `Frozen/MarkovTriple.lean:67`
+`psi`, which gives `psi_eps(f) in A0` and hence Markov. `Frozen/MarkovDiffusionOperators.lean:67`
 (`diffusion`, "whenever `psi(f) in A0`") and the docstring's declared deviation drop exactly this.
 Without stability the only information about the closure is its core; the only tool is closure of
 `Gamma`-bilinear data, which cannot see `|f|`.
@@ -106,7 +106,7 @@ Fix: prove `isMarkovianForm_of_approx` hypotheses for `circleTriple` (Fejer mean
 Mathlib's `fourier` L^2 partial sums `S_N` together with `energy(S_N h) = sum_{|k|<=N} k^2 |h_k|^2 <=
 energy(h)` for `h = |f|` via its Fourier coefficients), giving `circleTriple_friedrichs_isSemigroupOf`.
 
-### H2 (Medium, design) `Frozen/MarkovTriple.lean:67`, `Frozen/Semigroup.lean:15-20`: Markov property is not in the structure
+### H2 (Medium, design) `Frozen/MarkovDiffusionOperators.lean:67`, `Frozen/Semigroup.lean:15-20`: Markov property is not in the structure
 Because `A0` is not required to be `psi`-stable, `IsSemigroupOf` (which demands positivity) may have
 NO witness for some triples; then every theorem of the form `forall P, IsSemigroupOf T P -> ...`
 (including `FullMarkovTriple.semigroup_stable`, `Frozen/FullMarkovTriple.lean:61`) is vacuous for
@@ -144,5 +144,5 @@ Existence OK (L2); SpectralGap OK (I1); BeurlingDeny OK; DirMerge, DirBridge OK;
 TripleForm OK (well-definedness of `A[f] = -[Lf]` proved via Cauchy-Schwarz, density used correctly);
 Bridge OK modulo H1/H2; MarkovCriterion OK modulo H1; Closure OK (L1); Sanity weak (H1);
 OperatorSquareCompletion OK (namespace-only port); AxiomCheck OK (superseded by Audit/HilbertAxioms).
-Frozen/Semigroup.lean: L1. Frozen/MarkovTriple.lean: H2. Frozen/FullMarkovTriple.lean: H2 (vacuity of
+Frozen/Semigroup.lean: L1. Frozen/MarkovDiffusionOperators.lean: H2. Frozen/FullMarkovTriple.lean: H2 (vacuity of
 `semigroup_stable`).

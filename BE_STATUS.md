@@ -1,6 +1,6 @@
 # Bakry–Émery semigroup interpolation (Phase 4b): `CD(ρ,∞) ⇒ LSI(1/ρ)` — status
 
-Files: `MarkovTriple/FunctionalInequalities/BE*.lean` (21 files, all < 230 lines; no `sorry`, no axiom,
+Files: `MarkovDiffusionOperators/FunctionalInequalities/BE*.lean` (21 files, all < 230 lines; no `sorry`, no axiom,
 no heartbeat bump; every declaration depends only on `propext, Classical.choice, Quot.sound`, see
 `FunctionalInequalities/AxiomCheck.lean`).  NO Frozen file was edited (the frozen field `ibp_AA` already
 carries the one non-derivable integration by parts).

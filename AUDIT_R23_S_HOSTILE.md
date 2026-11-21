@@ -1,6 +1,6 @@
 # AUDIT R23 stream S (hostile): non-compact Riesz-Markov for infinite mu
 
-Audited: implementation commit 104f8b1 (merged into this branch), files `MarkovTriple/Stochastic/R23/{AEKernel,Exhaustion,SubInv,Triple,Markov,Lebesgue,AxiomCheck}.lean`, `STATEMENTS_R23_S.md`.
+Audited: implementation commit 104f8b1 (merged into this branch), files `MarkovDiffusionOperators/Stochastic/R23/{AEKernel,Exhaustion,SubInv,Triple,Markov,Lebesgue,AxiomCheck}.lean`, `STATEMENTS_R23_S.md`.
 Verdict: **ACCEPT** (0 HIGH, 0 MEDIUM, 3 LOW doc-scope).
 
 ## Mechanical checks (done by me)

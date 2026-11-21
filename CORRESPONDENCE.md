@@ -1,10 +1,10 @@
 # Correspondence with Bakry–Gentil–Ledoux (paraphrased; labels are the book's §3.4 labels)
 
 Status: **proved** = Lean theorem, no extra hypothesis beyond the stated ones; **cond.** = proved from a named regularity structure.
-Net status as of round 32 (November 2026). Chronology, exact remaining gaps and differences from the book: `MarkovTriple/BGL/Theory/GAPS.md`
+Net status as of round 32 (November 2026). Chronology, exact remaining gaps and differences from the book: `MarkovDiffusionOperators/BGL/Theory/GAPS.md`
 (read its "Net status" section first) and `ERRATA.md`.
 
-| Book | Lean (namespace `MarkovTriple.BGL`) | Status |
+| Book | Lean (namespace `MarkovDiffusionOperators.BGL`) | Status |
 |---|---|---|
 | D1–D8, Def 3.1.1 | `DiffusionTriple` | structure (frozen, proposed) |
 | D4, (3.1.1), (3.1.6), (3.1.8) | `exists_bound_D4`, `fundamental_identity`, `L_mul_ae`, `chain_rule_L` | proved |
@@ -38,9 +38,9 @@ Net status as of round 32 (November 2026). Chronology, exact remaining gaps and 
 | Gibbs on ℝᵈ; elliptic / Riemannian chart data | `GibbsRdData.gibbsRdFull_unconditional`, `gibbsRdFull_CD_unconditional` (`HessGe V ρ`), `gibbsRdFull_poincare_unconditional`, `gibbsRdFull_logSobolev_unconditional`, `gibbsRdFull_gradient_bound_noHyp`; `riemFull_unconditional` | proved (`HessGe`/`Curv ρ` are the only curvature hypotheses) |
 | Non-complete triples | `ivDiff`, `iv_no_fullTriple` (interval: not a full triple); `goFullTriple` (Gegenbauer `λ = 3/2`, `goFullTriple_CD : CD 3 4`); `oFull` (open zonal `S³`) | proved |
 | Finite-state obstruction | `Discrete.finite_Γ_ae_zero`, `finite_L_ae_zero`, `finite_standard_const` | proved (finite-state generators are not diffusions) |
-| Friedrichs extension, resolvent, generator, CFC semigroup (D7/D9 machinery) | `MarkovTriple.Hilbert.FormData.*` in `BGL/Analysis/Hilbert/` (fenced by `check_frozen.py`) | proved |
-| Hermite / Mehler analysis behind OU | `MarkovTriple.Sanity.OU.*` in `BGL/Analysis/OU/` (namespace kept from the removed legacy surface) | proved |
-| Beyond BGL Ch. 3–5: Feller kernels, `MarkovProcessBridge` | `MarkovTriple/Stochastic/` (`IsFellerC0`, e.g. `gibbsRdFull_isFellerC0_of_linGrowth`) | see GAPS rounds 17–32 |
+| Friedrichs extension, resolvent, generator, CFC semigroup (D7/D9 machinery) | `MarkovDiffusionOperators.Hilbert.FormData.*` in `BGL/Analysis/Hilbert/` (fenced by `check_frozen.py`) | proved |
+| Hermite / Mehler analysis behind OU | `MarkovDiffusionOperators.Sanity.OU.*` in `BGL/Analysis/OU/` (namespace kept from the removed legacy surface) | proved |
+| Beyond BGL Ch. 3–5: Feller kernels, `MarkovProcessBridge` | `MarkovDiffusionOperators/Stochastic/` (`IsFellerC0`, e.g. `gibbsRdFull_isFellerC0_of_linGrowth`) | see GAPS rounds 17–32 |
 
 Note: the legacy first surface (`Frozen/`, `Sanity/`, `FunctionalInequalities/`) no longer exists; see DECISIONS 17. All BGL names above
-live in `MarkovTriple/BGL/`.
+live in `MarkovDiffusionOperators/BGL/`.

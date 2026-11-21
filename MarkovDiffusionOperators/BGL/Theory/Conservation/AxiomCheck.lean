@@ -1,0 +1,14 @@
+import MarkovDiffusionOperators.BGL.Theory.Conservation.Compact
+
+#print axioms MarkovDiffusionOperators.BGL.ExtendedAlgebra.conservative_of_complete
+#print axioms MarkovDiffusionOperators.BGL.ExtendedAlgebra.isFiniteMeasure_of_complete
+#print axioms MarkovDiffusionOperators.BGL.ExtendedAlgebra.tendsto_Pt_complete
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.conservative_of_complete
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.isFiniteMeasure_of_complete
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasGradientBound
+#print axioms MarkovDiffusionOperators.BGL.CompactTriple.isComplete
+#print axioms MarkovDiffusionOperators.BGL.CompactTriple.hasGradientBound
+#print axioms MarkovDiffusionOperators.BGL.ExtendedAlgebra.ΓA_cs
+#print axioms MarkovDiffusionOperators.BGL.DiffusionTriple.semigroup_tendsto_zero
+#print axioms MarkovDiffusionOperators.BGL.DiffusionTriple.inner_duhamel
+#print axioms MarkovDiffusionOperators.BGL.IsGoodMeasure.of_countablyGenerated

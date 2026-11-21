@@ -124,3 +124,11 @@ was renamed.
     the author: the namespace `MarkovTriple.BGL` bakes the book's initials into declaration names; if the library is ever
     submitted to Mathlib or Reservoir, a rename of `BGL` (e.g. to `BakryEmery`) is a mechanical, one-time change, best done
     BEFORE author approval freezes the hashes.  (Caveat retained for the record; the author chose not to rename.)
+26. Rename (supersedes 25). DECIDED (author, 2026-11-21): repository `MarkovDiffusionOperators` (GitHub
+    `djalilchafai/MarkovDiffusionOperators`, formerly `markov-triple`), lakefile package `markovDiffusionOperators`,
+    lean_lib and top-level namespace `MarkovDiffusionOperators` (formerly `MarkovTriple`), source folder
+    `MarkovDiffusionOperators/`.  Matches the title of the book and of the Tau Ceti roadmap `MarkovDiffusionOperators`.
+    Purely mechanical: only the token `MarkovTriple` was replaced (concept names such as `FullMarkovTriple`,
+    `toMarkovTriple` are unchanged); every `.lean` file differs from its predecessor only by this token; the frozen
+    manifest hashes were regenerated for that reason alone.  The sub-namespace `BGL` is kept.  Items 1-25 above, and
+    `PLAN.md`, keep the old names as a historical record.

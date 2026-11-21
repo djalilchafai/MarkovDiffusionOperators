@@ -1,0 +1,19 @@
+import MarkovDiffusionOperators.BGL.Theory.Interp.EntropyApplications
+
+#print axioms MarkovDiffusionOperators.BGL.hasDerivAt_integral_smooth
+#print axioms MarkovDiffusionOperators.BGL.continuous_integral_smooth
+#print axioms MarkovDiffusionOperators.BGL.continuous_integral_div
+#print axioms MarkovDiffusionOperators.BGL.hasDerivAt_integral_div
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.entE_continuousOn
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.entI_continuousOn
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasDerivAt_entE
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasDerivAt_entI_pair
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.Γ₂_comp
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.fisher_alg
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasDerivAt_entI
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.entropyInterpolation
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.logSobolev_unconditional
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.logSobolev_domain_unconditional
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.finiteDim_bdd
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.logSobolev_dim_of_ext
+#print axioms MarkovDiffusionOperators.BGL.Instances.Gibbs.GibbsData.gibbsFull_logSobolev_unconditional

@@ -1,7 +1,7 @@
 # AUDIT_FROZEN3 (round 3, hostile)
 
 Scope: DECISIONS 8-11, `Frozen/*`, `Sanity/{Circle,Lebesgue,Trivial,Ergodic}`, `Hilbert/{TripleForm,MarkovCriterion,Bridge,FullBridge}`.
-Lean artefacts (not imported by root, all under `MarkovTriple/Audit/`):
+Lean artefacts (not imported by root, all under `MarkovDiffusionOperators/Audit/`):
 `Frozen3Axioms.lean` (env walk), `Frozen3OU.lean` (G2, proved, no sorry), `Frozen3Conservative.lean` (G1, proved, no sorry),
 `Frozen3CircleFull.lean` (G3: circle `FullMarkovTriple`, 2 deliberate `sorry`: `esa`, `semigroup_stable`).
 BGL numbering/content is UNVERIFIED (no book access); statements about "what BGL asks" below are from memory and flagged.
@@ -10,19 +10,19 @@ BGL numbering/content is UNVERIFIED (no book access); statements about "what BGL
 
 | id | sev | where | finding | fix |
 |---|---|---|---|---|
-| N1 | HIGH (design) | `Frozen/MarkovTriple.lean:46,49` | `comp_mem` (all smooth ψ, ψ(0)=0) + `memLp` forces every `f ∈ A₀` to be μ-essentially bounded (pick ψ growing faster than 1/μ(\|f\|>n)). Not only "polynomials excluded" (ERRATA G2): every OU/Gibbs class with an unbounded element is impossible. PROVED for N(0,1): `Frozen3Audit.no_identity_in_A0_gaussian` (ψ=exp(z²)−1; any `T : MarkovTriple ℝ` with `μ = gaussianReal 0 1` has `id ∉ T.A₀`). C_c^∞ / Schwartz / C^∞(𝕋) remain fine. | restrict ψ to temperate class (below), or document A₀ ⊂ L^∞ ∩ ⋂Lᵖ |
+| N1 | HIGH (design) | `Frozen/MarkovDiffusionOperators.lean:46,49` | `comp_mem` (all smooth ψ, ψ(0)=0) + `memLp` forces every `f ∈ A₀` to be μ-essentially bounded (pick ψ growing faster than 1/μ(\|f\|>n)). Not only "polynomials excluded" (ERRATA G2): every OU/Gibbs class with an unbounded element is impossible. PROVED for N(0,1): `Frozen3Audit.no_identity_in_A0_gaussian` (ψ=exp(z²)−1; any `T : MarkovDiffusionOperators ℝ` with `μ = gaussianReal 0 1` has `id ∉ T.A₀`). C_c^∞ / Schwartz / C^∞(𝕋) remain fine. | restrict ψ to temperate class (below), or document A₀ ⊂ L^∞ ∩ ⋂Lᵖ |
 | N2 | MEDIUM | `Frozen/Semigroup.lean:29-37` | G1 confirmed and sharpened: (a) finite μ: Friedrichs semigroup of a bare triple is NOT conservative when a Dirichlet–Poincaré inequality holds. PROVED: `Hilbert.not_conservative_of_dirichlet_poincare` (hyp. `∫f² ≤ c·energy f` on A₀, μ finite ≠0; conclusion: Friedrichs `P_t` violates clause 6). Applies to C_c^∞(0,1), Γ=f'g', c=1/2. (b) infinite μ: clause 6 is vacuous (PROVED `Frozen3Audit.markov_clause_vacuous_lebesgue`) AND `IsSemigroupOf` has no contractivity/sub-Markov clause, so e.g. a Robin-with-negative-coefficient self-adjoint extension on C_c^∞(0,∞) (positivity preserving, strongly continuous, generator extends L, grows like e^{κ²t}) is a witness. (c) even for a FullMarkovTriple with infinite μ, conservativeness is not derivable from `esa` (stochastically incomplete complete manifolds have esa for C_c^∞ yet P_t1<1; from memory of Azencott/Dodziuk/Grigor'yan, not formalised). | add clause `∀ t u, u ≤ᵐ 1 → P t u ≤ᵐ 1` (sub-Markov; derivable for the Friedrichs semigroup with the same truncation machinery: ψ_n smooth, ψ_n(0)=0, 0≤ψ_n'≤1, ψ_n→(0∨t)∧1, normal contraction + BeurlingDeny). Keep clause 6 for finite μ; for infinite μ add a separate predicate `IsConservative` (∫P_t g = ∫g, g∈L¹∩L²) used as a hypothesis only. Do NOT put conservativeness in `IsSemigroupOf` for infinite μ. |
 | N3 | MEDIUM | `FullMarkovTriple.lean:66,74` | G3 (esa/semigroup_stable never inhabited for Γ≠0). Now: every other field of FullMarkovTriple is proved for the circle with `A = A₀ = C^∞(𝕋)` (`Frozen3CircleFull.lean`, `circleFull`; `circleFull_Γ_ne_zero`). Only `esa`, `semigroup_stable` remain. No contradiction found in any field. Obstacles below. | prove the two fields (plan below) |
-| N4 | LOW | `MarkovTriple.lean:46` | `memLp : ∀ p ≠ ∞` includes p∈[0,1): for infinite μ this demands ∫\|f\|^p<∞ for p<1 (e.g. fails for classes decaying like 1/(1+x²)); BGL's ⋂ is over 1≤p<∞ (from memory). `memLp2`/`integrable_of_mem` only use p=1,2. | quantify `∀ p, 1 ≤ p → p ≠ ∞` |
+| N4 | LOW | `MarkovDiffusionOperators.lean:46` | `memLp : ∀ p ≠ ∞` includes p∈[0,1): for infinite μ this demands ∫\|f\|^p<∞ for p<1 (e.g. fails for classes decaying like 1/(1+x²)); BGL's ⋂ is over 1≤p<∞ (from memory). `memLp2`/`integrable_of_mem` only use p=1,2. | quantify `∀ p, 1 ≤ p → p ≠ ∞` |
 | N5 | LOW | `scripts/check_frozen.py` | Works (OK, 13/13 listed, no unlisted, all `proposed`). Weak points: `--update` rewrites hashes with no external anchor; manifest, script and hashed files live in the same tree; `Frozen/*` import only `Frozen/*` and Mathlib (checked), so no unhashed dependency, but the *hash of Mathlib pin* is not covered (lake-manifest). | store manifest SHA in DECISIONS.md/CI, run in CI (E3) |
 | N6 | INFO | `Frozen/Ergodic.lean` | For infinite μ `ErgodicL2` degenerates (L²-kernel of L̄ is {0}); fine, true for Lebesgue. Not a defect. | none |
 | N7 | INFO | `Semigroup.lean:20` | docstring "such a P is unique under esa" still unproved (ERRATA L1). `semigroup_stable` universally quantifies over P so the circle proof needs uniqueness anyway (plan below). | prove or soften |
 
-Axiom walk (item 5): `Frozen3Axioms.lean` over all 770 non-private constants of all `MarkovTriple.*` modules reachable from the root
+Axiom walk (item 5): `Frozen3Axioms.lean` over all 770 non-private constants of all `MarkovDiffusionOperators.*` modules reachable from the root
 (586 theorems, 166 defs): offenders = [], no `axiom`/`opaque`/`unsafe`/`partial` declarations, no `sorryAx`. (Run takes ~3 min.)
 New Audit theorems also depend only on propext/Classical.choice/Quot.sound.
 
-## (1) Vacuity / contradiction of `MarkovTriple`, `FullMarkovTriple`
+## (1) Vacuity / contradiction of `MarkovDiffusionOperators`, `FullMarkovTriple`
 
 Circle (`Sanity/Circle.lean:150,420`) and Lebesgue (`Sanity/Lebesgue.lean:~190`) prove EVERY field (read: no `sorry`, `circleTriple`/`lebesgueTriple` closed terms).
 - Γ, L junk: `Γ f g = D f * D g`, `L = D∘D` are defined by `deriv` for all functions, but every field constrains them only on A₀, and every
@@ -60,7 +60,7 @@ normal-contraction approximants, and still keeps polynomial classes stable). Cos
 
 Formal: `Frozen3Conservative.lean`, `not_conservative_of_dirichlet_poincare` (axioms clean). Proof: conservative ⇒ `P_t u=u` ⇒ (by `tendsto_generator_iff`) `u∈D(A_F)`, `A_F u=0` ⇒ `R u=u`
 ⇒ `u∈Q`, `E(u)=0` (`E_R`) ⇒ approximants f_n∈A₀, `E(f_n)→0`, `‖f_n‖²≤c E(f_n)` ⇒ `u=0`, contradicting ‖1‖²=μ(univ)>0.
-Instance of the hypothesis: C_c^∞(0,1) (Lebesgue on (0,1)): f(x)²≤x∫f'² ⇒ ∫f²≤½∫f'². (I did not build the C_c^∞(0,1) MarkovTriple in Lean; the theorem is stated abstractly for any triple satisfying the inequality. Density of C_c^∞(0,1) in L²(0,1) would be the only new work.)
+Instance of the hypothesis: C_c^∞(0,1) (Lebesgue on (0,1)): f(x)²≤x∫f'² ⇒ ∫f²≤½∫f'². (I did not build the C_c^∞(0,1) MarkovDiffusionOperators in Lean; the theorem is stated abstractly for any triple satisfying the inequality. Density of C_c^∞(0,1) in L²(0,1) would be the only new work.)
 Recommendation: see N2 (sub-Markov clause yes; conservativeness clause only for finite μ).
 
 ## (3b) What `FullMarkovTriple` is missing for conservativeness at infinite μ

@@ -1,0 +1,11 @@
+import MarkovDiffusionOperators.BGL.Theory.Interp.JensenGrad
+import MarkovDiffusionOperators.BGL.Instances.Gibbs.JensenMain
+
+#print axioms MarkovDiffusionOperators.BGL.sq_le_of_forall_rat
+#print axioms MarkovDiffusionOperators.BGL.jensen_sq
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.gradient_bound_unconditional
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasGradientBound_unconditional
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.conservative_of_complete_unconditional
+#print axioms MarkovDiffusionOperators.BGL.Instances.Gibbs.GibbsData.gibbsFull_gradient_bound_unconditional
+#print axioms MarkovDiffusionOperators.BGL.Instances.Gibbs.GibbsData.gibbsFull_hasGradientBound
+#print axioms MarkovDiffusionOperators.BGL.Instances.GibbsRd.GibbsRdData.gibbsRdFull_gradient_bound_unconditional

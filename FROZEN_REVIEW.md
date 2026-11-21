@@ -1,7 +1,7 @@
 # FROZEN_REVIEW: frozen definition surface (status: all `proposed`; REDESIGNED in round 2)
 
-Files: `MarkovTriple/Frozen/{PartialDeriv,MarkovTriple,Gamma2,CD,Energy,Ent,Poincare,LSI,Fisher,Semigroup,FullMarkovTriple}.lean`.
-Sanity (not frozen): `MarkovTriple/Sanity/Trivial.lean`. Manifest: `frozen-manifest.json`; check with `scripts/check_frozen.py`.
+Files: `MarkovDiffusionOperators/Frozen/{PartialDeriv,MarkovDiffusionOperators,Gamma2,CD,Energy,Ent,Poincare,LSI,Fisher,Semigroup,FullMarkovTriple}.lean`.
+Sanity (not frozen): `MarkovDiffusionOperators/Sanity/Trivial.lean`. Manifest: `frozen-manifest.json`; check with `scripts/check_frozen.py`.
 BGL numbering in docstrings is partly from memory; entries marked "numbering to be verified" must be checked against the book.
 `Frozen/Basic.lean` (old placeholder) was deleted (ERRATA E1). Files now also include `Ergodic`, `CDFull`.
 
@@ -32,14 +32,14 @@ R4. **`FullMarkovTriple`**: `A : Subalgebra` (unital) with `A₀_le : ∀ f ∈ 
    proof additionally needs (Γ(P_t f) ∈ L¹, ∫ L Γ(P_t f) = 0, i.e. integration against the constant 1 ∈ A \ A₀ in
    infinite measure) is NOT provided; for finite μ it follows from `resolvent_eq` with `f = Γ(P_t f)`
    (since `1 ∈ D(L̄)`, `L̄1 = 0`). Left to the Bakry–Émery development.
-R5. **Markov property derived.** `Hilbert.isMarkovianForm : ∀ T : MarkovTriple E, IsMarkovianForm T`
+R5. **Markov property derived.** `Hilbert.isMarkovianForm : ∀ T : MarkovDiffusionOperators E, IsMarkovianForm T`
    (the 'explicit hypothesis' of the bridge is removed). Proof: `ψ_δ(t) = √(t²+δ²) − δ` is smooth with
    `ψ_δ(0)=0`, so `ψ_δ(f) ∈ A₀` (`comp_mem`); chain rule gives `Γ(ψ_δ f) = ψ_δ'(f)² Γ(f) ≤ Γ(f)`; dominated
    convergence gives `ψ_δ(f) → |f|` in L² (`0 ≤ |f| − ψ_δ(f) ≤ min(δ,|f|)`); then the existing
    `isMarkovianForm_of_approx` (lower semicontinuity) concludes. Nothing remains open for positivity.
 R6. **Conservativeness.** `IsSemigroupOf` is unchanged. For `FullMarkovTriple`, `P_t 1 = 1` is proved
    (`tripleSemigroup_one`), hence `Hilbert.isSemigroupOf_full` holds with no extra hypothesis. For a bare
-   `MarkovTriple` it cannot hold in general (C_c^∞(0,1)); `isSemigroupOf_of_markov_conservative` takes it as a
+   `MarkovDiffusionOperators` it cannot hold in general (C_c^∞(0,1)); `isSemigroupOf_of_markov_conservative` takes it as a
    hypothesis. For infinite μ the clause is vacuous (ERRATA G1).
 R7. **Unchanged**: `CD`/`CDFull`, `PoincareIneq`/`LogSobolevIneq` (with `IsProbabilityMeasure`), `ErgodicL2`/`ErgodicΓ`,
    `fisherInfo`/`IsFisherAdmissible`, `IsSemigroupOf`, `energy`, `Ent`, `Γ₂`, `semigroup_stable`.
@@ -71,12 +71,12 @@ R8. **Instances.** `trivialTriple`/`trivialFull` (A₀ = ⊤ non-unital); circle
 
 * No nontrivial satisfiability evidence: the sanity instance has `L = Γ = 0` on a finite discrete space. The `Γ ≠ 0` case (OU on ℝ with polynomials, or circle) requires density of polynomials / trigonometric polynomials in Lᵖ and was not attempted. A genuine nonzero instance is the next sanity task; until then non-vacuity of `diffusion`, `dense` with `Γ≠0` is untested. Note finite spaces with `L ≠ 0` are impossible (diffusion property excludes jump generators).
 * `A₀` closed under `Γ`, `L`, and `Γ ∈ A₀` forces e.g. for Gaussian `A₀` = polynomials: OK; for compactly supported smooth functions fine too.
-* `MarkovTriple` has no field making `Γ`/`L` junk off `A₀` irrelevant; theorems about `Γ₂ f` for `f ∈ A₀` use `Γ₂ f` which evaluates `L (Γ f f)`: inside `A₀` by `Γ_mem`, good.
+* `MarkovDiffusionOperators` has no field making `Γ`/`L` junk off `A₀` irrelevant; theorems about `Γ₂ f` for `f ∈ A₀` use `Γ₂ f` which evaluates `L (Γ f f)`: inside `A₀` by `Γ_mem`, good.
 * μ finite is forced; the Lebesgue-measure/ℝⁿ-heat-semigroup case is excluded by design (PLAN's examples are all probability).
 
 ## Attack suggestions (auditor)
 
-1. Exhibit a triple satisfying `MarkovTriple` for which a BGL consequence fails (e.g. non-uniqueness of `L` given `Γ`: ibp + dense gives `L f` a.e. only; pointwise `carre_du_champ` ties `L(fg)` but is `L` determined by `Γ`? check).
+1. Exhibit a triple satisfying `MarkovDiffusionOperators` for which a BGL consequence fails (e.g. non-uniqueness of `L` given `Γ`: ibp + dense gives `L f` a.e. only; pointwise `carre_du_champ` ties `L(fg)` but is `L` determined by `Γ`? check).
 2. Pathological `A₀` where `diffusion` is vacuous beyond polynomials.
 3. `IsSemigroupOf` satisfied by a non-Markov/non-minimal semigroup when `esa` fails; and whether `IsSemigroupOf` is satisfiable at all for nontrivial triples (e.g. `Lp` topology/`nhds 0` on `ℝ≥0` fine).
 4. `CD` with a.e. vs `Γ₂` evaluated on junk off support; `n < 1` allowed.
@@ -84,7 +84,7 @@ R8. **Instances.** `trivialTriple`/`trivialFull` (A₀ = ⊤ non-unital); circle
 
 ## Round 4 changes (ERRATA N4, N2, L1)
 
-R7. **`MarkovTriple.memLp`** now quantifies over `1 ≤ p < ∞` only (was `p ≠ ∞`, which included
+R7. **`MarkovDiffusionOperators.memLp`** now quantifies over `1 ≤ p < ∞` only (was `p ≠ ∞`, which included
     `p ∈ [0,1)` and excluded e.g. classes decaying like `1/(1+x²)` for infinite μ). Instances
     (Trivial, Circle, Lebesgue) and users (`memLp2`, `integrable_of_mem`, Audit) updated.
 R8. **`IsSemigroupOf`** gained the sub-Markov clause `∀ t (u : L²), u ≤ᵐ 1 → P t u ≤ᵐ 1`, stated on
@@ -93,11 +93,11 @@ R8. **`IsSemigroupOf`** gained the sub-Markov clause `∀ t (u : L²), u ≤ᵐ 
     finite μ only). New separate predicate `IsConservative T P` (`P_t g ∈ L¹`, `∫P_t g = ∫g` for
     `g ∈ L¹ ∩ L²`), NOT part of `IsSemigroupOf`. Docstring uniqueness claim softened (L1).
     Audit points: (i) the clause is implied by the other clauses for finite μ and conservativeness;
-    (ii) it is proved for the Friedrichs semigroup of every `MarkovTriple`, so `isSemigroupOf_full`
+    (ii) it is proved for the Friedrichs semigroup of every `MarkovDiffusionOperators`, so `isSemigroupOf_full`
     is still unconditional; (iii) `semigroup_stable` hypotheses are strengthened (extra clause on P)
     hence the field is weaker than before, which is harmless (still a field to be proved for the
     circle, where the Friedrichs semigroup satisfies the clause).
-    Manifest hashes of Frozen/MarkovTriple.lean and Frozen/Semigroup.lean updated (status still
+    Manifest hashes of Frozen/MarkovDiffusionOperators.lean and Frozen/Semigroup.lean updated (status still
     `proposed`).
 
 R9. **`FullMarkovTriple.ibp_AA`** (ERRATA P4-1) added: `∀ f ∈ A, ∀ k ∈ A, MemLp f 2 → MemLp (L f) 2 →
@@ -132,7 +132,7 @@ Status: **MATCH** (same content), **STRONGER** (ours implies the book's), **EQUI
 | D5 L defined by integration by parts; chain rule for L follows | L is a field, ibp is a field, chain rule for L is also a field | EXTRA redundancy, consistent |
 | D6 L(A₀)⊂A₀ | `L_mem` | MATCH |
 | D7 D(E), D(L) by completion / Friedrichs | Hilbert layer (`FormData`, Friedrichs) | MATCH |
-| D8 ∫Lf dμ = 0 for f∈A₀ | **not a field of `MarkovTriple`**; derived only for `FullMarkovTriple` (via `ibp_A_symm` with f=1) | **MISSING** from the bare structure |
+| D8 ∫Lf dμ = 0 for f∈A₀ | **not a field of `MarkovDiffusionOperators`**; derived only for `FullMarkovTriple` (via `ibp_A_symm` with f=1) | **MISSING** from the bare structure |
 | D9 P_t from the self-adjoint L; positivity preserving and sub-Markov | `IsSemigroupOf` characterizes P_t by 8 clauses incl. positivity, sub-Markov, generator extends L; existence proved (`isSemigroupOf_full`) | EQUIV in spirit (characterization instead of construction) |
 
 ## Standard triple (S10–S11)

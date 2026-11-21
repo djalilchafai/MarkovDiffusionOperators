@@ -1,0 +1,25 @@
+import MarkovDiffusionOperators.Stochastic.FellerMeasurable
+import MarkovDiffusionOperators.Stochastic.FellerProcessBridge
+import MarkovDiffusionOperators.Stochastic.ExactCK
+
+/-! Axiom audit of the round-17 stochastic layer (see `STATEMENTS_R17.md`). -/
+
+#print axioms MarkovDiffusionOperators.Stochastic.measurable_of_integrals_param
+#print axioms MarkovDiffusionOperators.Stochastic.clsC_le_iff
+#print axioms MarkovDiffusionOperators.Stochastic.isClosed_fellerOp_ball
+#print axioms MarkovDiffusionOperators.Stochastic.measurable_fellerOp_time
+#print axioms MarkovDiffusionOperators.Stochastic.measurable_fellerOp_joint
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_measurable_joint
+#print axioms MarkovDiffusionOperators.Stochastic.fellerMarkovProcessData
+#print axioms MarkovDiffusionOperators.Stochastic.fellerMarkovProcessBridge
+#print axioms MarkovDiffusionOperators.Stochastic.fellerMarkovProcessBridge_kernel
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphereMarkovProcessBridge
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphereMarkovProcessBridge_kernel
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphereMarkovProcessBridge_isMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.ae_measure_eq_of_forall
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.kappa_zero_ae
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.measurableSet_shrink
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.measure_shrink_compl
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.iterShrink_good
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.exists_exact_ck
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernel_exists_exact_ck

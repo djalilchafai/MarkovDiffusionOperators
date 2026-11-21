@@ -1,6 +1,6 @@
-name = "markovTriple"
+name = "markovDiffusionOperators"
 version = "0.1.0"
-defaultTargets = ["MarkovTriple"]
+defaultTargets = ["MarkovDiffusionOperators"]
 
 [[require]]
 name = "mathlib"
@@ -8,4 +8,4 @@ scope = "leanprover-community"
 rev = "v4.35.0-rc2"
 
 [[lean_lib]]
-name = "MarkovTriple"
+name = "MarkovDiffusionOperators"

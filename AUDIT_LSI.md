@@ -1,4 +1,4 @@
-# AUDIT_LSI (round 7, hostile) — `MarkovTriple.Sanity.OU.ou_lsi`
+# AUDIT_LSI (round 7, hostile) — `MarkovDiffusionOperators.Sanity.OU.ou_lsi`
 
 Verdict: no refutation found. No CRITICAL/HIGH/MEDIUM findings. LOW/INFO notes below.
 
@@ -36,8 +36,8 @@ Verdict: no refutation found. No CRITICAL/HIGH/MEDIUM findings. LOW/INFO notes b
 - Note `BEReg` uses `ouFull.L/Γ` which are defeq to Lo/Go (used via `show`); fine.
 
 ## (4) Banned constructs / axioms
-- grep (sorry|axiom|native_decide|unsafe|opaque|implemented_by|extern) over MarkovTriple/: only comment/doc hits. No `set_option` in audited files.
-- Axiom walk (LSIAudit.lean, `run_cmd`): 405 non-internal constants in MarkovTriple.Sanity.OU.*, FunctionalInequalities.BE*, Frozen.LSI:
+- grep (sorry|axiom|native_decide|unsafe|opaque|implemented_by|extern) over MarkovDiffusionOperators/: only comment/doc hits. No `set_option` in audited files.
+- Axiom walk (LSIAudit.lean, `run_cmd`): 405 non-internal constants in MarkovDiffusionOperators.Sanity.OU.*, FunctionalInequalities.BE*, Frozen.LSI:
   0 with non-standard axioms, 0 unsafe/partial/opaque/axiom. `#print axioms ou_lsi` = [propext, Classical.choice, Quot.sound].
 
 ## (5) Junk / representative / finiteness

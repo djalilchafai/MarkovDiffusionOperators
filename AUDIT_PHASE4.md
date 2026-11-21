@@ -1,6 +1,6 @@
 # AUDIT_PHASE4 (round 4, hostile) — FunctionalInequalities + Hilbert/SubMarkov
 
-Scope: `FunctionalInequalities/{GapFromSquare,TripleSquare,Poincare}.lean`, `Frozen/{CD,CDFull,Poincare,Ergodic,FullMarkovTriple,MarkovTriple,Semigroup,Gamma2,Energy}.lean`,
+Scope: `FunctionalInequalities/{GapFromSquare,TripleSquare,Poincare}.lean`, `Frozen/{CD,CDFull,Poincare,Ergodic,FullMarkovTriple,MarkovDiffusionOperators,Semigroup,Gamma2,Energy}.lean`,
 `Hilbert/SubMarkov.lean`, `FullBridge.lean` (`resolvent_eq`, `L_one`). FI_STATUS.md read only after forming the view.
 Frozen manifest hashes: all 13 files match `frozen-manifest.json`. No `sorry` in scope.
 New files (none imported by the root): `Audit/Phase4Axioms.lean`, `Audit/Phase4NonVacuous.lean`, `Audit/Phase4Curvature.lean`.

@@ -1,10 +1,10 @@
 # Hostile audit of the Divergences layer
 
-Scope: `MarkovTriple/Divergences/*.lean` (12 files) against the three source repos (shallow clones in the scratchpad `src/`). Lean v4.35.0-rc2. Nothing under Divergences/, Frozen/, Sanity/ was edited.
+Scope: `MarkovDiffusionOperators/Divergences/*.lean` (12 files) against the three source repos (shallow clones in the scratchpad `src/`). Lean v4.35.0-rc2. Nothing under Divergences/, Frozen/, Sanity/ was edited.
 
 Artifacts (not imported by the root):
-- `MarkovTriple/Audit/DivergencesAxioms.lean`: environment-walking axiom check. It covers every non-private, non-internal, non-projection constant whose module is under `MarkovTriple.Divergences`.
-- `MarkovTriple/Audit/DivergencesCounterexamples.lean`: compiled junk-value witnesses (F2, F3, F4 below).
+- `MarkovDiffusionOperators/Audit/DivergencesAxioms.lean`: environment-walking axiom check. It covers every non-private, non-internal, non-projection constant whose module is under `MarkovDiffusionOperators.Divergences`.
+- `MarkovDiffusionOperators/Audit/DivergencesCounterexamples.lean`: compiled junk-value witnesses (F2, F3, F4 below).
 
 ## Verdicts
 

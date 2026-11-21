@@ -2,7 +2,7 @@
 
 Scope: `FunctionalInequalities/BE*.lean` (esp. BEStable, BELSI, BEAlg, BEMain1-6, BEGronwall, BECircle),
 `Frozen/{LSI,Fisher,CDFull,FullMarkovTriple,Semigroup}`. Lean files (not imported by root, compile):
-`MarkovTriple/Audit/BEAudit.lean` (3 s), `MarkovTriple/Audit/BEAxiomWalk.lean` (2 min).
+`MarkovDiffusionOperators/Audit/BEAudit.lean` (3 s), `MarkovDiffusionOperators/Audit/BEAxiomWalk.lean` (2 min).
 
 ## Verdicts
 
@@ -97,10 +97,10 @@ Frozen: `LogSobolevIneq C := IsProbabilityMeasure μ ∧ ∀ f ∈ 𝒜₀, Ent(
 
 ## 4. Axioms / banned constructs
 
-`Audit/BEAxiomWalk.lean`: every non-internal constant in `MarkovTriple.FunctionalInequalities.*` and `MarkovTriple.Frozen.*`
+`Audit/BEAxiomWalk.lean`: every non-internal constant in `MarkovDiffusionOperators.FunctionalInequalities.*` and `MarkovDiffusionOperators.Frozen.*`
 (263 constants): 0 with axioms other than `propext, Classical.choice, Quot.sound`; 0 axiom/opaque/unsafe/partial declarations.
 grep over `FunctionalInequalities/`, `Frozen/` for `sorry|axiom|native_decide|unsafe|implemented_by|@[extern|opaque|admit|set_option|macro|syntax|elab|partial`:
-only a comment in Frozen/MarkovTriple.lean ("nothing is an axiom").  `Audit/BEAudit.lean` axioms: standard.
+only a comment in Frozen/MarkovDiffusionOperators.lean ("nothing is an axiom").  `Audit/BEAudit.lean` axioms: standard.
 
 ## What remains for a fully unconditional Gaussian LSI
 

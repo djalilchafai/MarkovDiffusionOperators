@@ -42,7 +42,7 @@
 
 **The plan** (§4–§5) follows Bakry–Gentil–Ledoux, Chapter 3. The order is:
 1. Extract the low-risk divergences (total variation, Kullback–Leibler, Wasserstein, entropy).
-2. Seal the `MarkovTriple` / `FullMarkovTriple` definitions. **The author approves them before any proof work starts.**
+2. Seal the `MarkovDiffusionOperators` / `FullMarkovTriple` definitions. **The author approves them before any proof work starts.**
 3. Merge the two Hilbert-space semigroup constructions.
 4. Port the Bakry–Émery proofs from the manifold setting to the abstract triple.
 5. Build the instances: Gibbs measures on ℝᵈ, Gaussian/Ornstein–Uhlenbeck, Riemannian, discrete.
@@ -57,7 +57,7 @@ The current versions of the projects stay as tagged releases, because the Paloma
 - whether finite-dimension CD(ρ,n) is in scope from the start;
 - whether to depend on `MarkovProcess` directly or only through the optional bridge (bridge recommended).
 
-**Next step.** Once these decisions are taken, draft the frozen `MarkovTriple` statement files for the author's review.
+**Next step.** Once these decisions are taken, draft the frozen `MarkovDiffusionOperators` statement files for the author's review.
 
 ---
 
@@ -339,7 +339,7 @@ This is the hypothesis that makes semigroup interpolation (d/ds P_s(φ(P_{t−s}
 
 ```lean
 /-- Bakry–Gentil–Ledoux Definition 3.1.8. Every analytic requirement is a field to be proved. -/
-structure MarkovTriple (E : Type*) [MeasurableSpace E] where
+structure MarkovDiffusionOperators (E : Type*) [MeasurableSpace E] where
   μ        : Measure E
   [sf      : SigmaFinite μ]
   A₀       : Subalgebra ℝ (E → ℝ)            -- test functions
@@ -353,17 +353,17 @@ structure MarkovTriple (E : Type*) [MeasurableSpace E] where
   dense    : ∀ p, 1 ≤ p → p < ∞ → Dense {u : Lp ℝ p μ | ∃ f ∈ A₀, u =ᵐ[μ] f}
   diffusion: ...                              -- chain rule for smooth ψ
 
-namespace MarkovTriple
-def Γ₂ (T : MarkovTriple E) (f : E → ℝ) : E → ℝ := fun x => (T.L (T.Γ f f) x - 2 * T.Γ f (T.L f) x) / 2
+namespace MarkovDiffusionOperators
+def Γ₂ (T : MarkovDiffusionOperators E) (f : E → ℝ) : E → ℝ := fun x => (T.L (T.Γ f f) x - 2 * T.Γ f (T.L f) x) / 2
 def CD (T) (ρ : ℝ) (n : ℝ≥0∞) : Prop := ∀ f ∈ T.A₀, ∀ᵐ x ∂T.μ, ρ * T.Γ f f x + (T.L f x)^2 / n ≤ T.Γ₂ f x
 def energy (T) (f) : ℝ := ∫ x, T.Γ f f x ∂T.μ
 def Ent (μ) (f) : ℝ := ∫ x, f x * log (f x) ∂μ - (∫ x, f x ∂μ) * log (∫ x, f x ∂μ)   -- unify entL / squareEntropy
 def PoincareIneq (T) (C : ℝ) : Prop := ∀ f ∈ T.A₀, variance f T.μ ≤ C * T.energy f
 def LogSobolevIneq (T) (C : ℝ) : Prop := ∀ f ∈ T.A₀, Ent T.μ (f^2) ≤ 2 * C * T.energy f
-end MarkovTriple
+end MarkovDiffusionOperators
 
 /-- BGL §3.3–3.4: the extra hypotheses that make semigroup interpolation legitimate. -/
-structure FullMarkovTriple (E) [MeasurableSpace E] extends MarkovTriple E where
+structure FullMarkovTriple (E) [MeasurableSpace E] extends MarkovDiffusionOperators E where
   A        : Subalgebra ℝ (E → ℝ)    -- extended algebra, contains A₀ and constants
   ...                               -- P_t (stable class) ⊆ A, essential self-adjointness, ...
 ```
@@ -381,7 +381,7 @@ Points to decide when sealing these definitions:
 |---|---|---|
 | `Divergences` | `Ent`, KL bridge (`klDiv`), TV, Pinsker, relative Lᵖ, χ², Hellinger, varentropy, W₂ (one definition on `PseudoEMetricSpace`), couplings, Kantorovich duality, Gaussian W₂ / Gelbrich, entropy tensorization | CR `TotalVariation`, `Pinsker`, `RelativeLpDistance`, `KL*`, `Transport*`, `*TransportDuality*`; GP `squareEntropy`, `*EntropyTensorization`, `EntropyL2Closure`; CF `wassersteinSq_map_affine'`, `wassersteinSq_elliptic'` |
 | `Hilbert` | Symmetric nonnegative form → Friedrichs extension → resolvent → CFC semigroup; self-adjoint generator from resolvent; spectral gap ⇔ L² decay | CR `FormData`/`DirFormData` (merge), `cfcSemigroup`, `positiveResolventOperator`; GP `resolventGenerator`, `resolventCfcEvolution`, `OperatorSquareCompletion` |
-| `MarkovTriple` | `MarkovTriple`, `FullMarkovTriple`, Γ₂, CD, Dirichlet form and its domain, P_t, Markov property of P_t, invariance and symmetry of μ | new, abstracted from CR `Riemann/WeightedInterface`, `DiffAPI` |
+| `MarkovDiffusionOperators` | `MarkovDiffusionOperators`, `FullMarkovTriple`, Γ₂, CD, Dirichlet form and its domain, P_t, Markov property of P_t, invariance and symmetry of μ | new, abstracted from CR `Riemann/WeightedInterface`, `DiffAPI` |
 | `FunctionalInequalities` | PI, LSI, Fisher information, CD ⇒ gradient bounds ⇒ LSI ⇒ PI, decay equivalences, hypercontractivity, Herbst, T₂, tensorization, Holley–Stroock, Brascamp–Lieb | CR `DiffBEMain`, `DiffLSI`, `LangevinGrossHypercontractivity`, `Talagrand`, `HopfLax*`; GP `CorrespondenceBrascampLieb*`, `SquareEntropyLinearization` |
 | `Instances` | (a) Euclidean Gibbs e^{−V}dx; (b) Gaussian / OU (Mehler, Hermite); (c) weighted Riemannian manifold; (d) discrete: two-point, cube, products | (a) CR `Gibbs*`, `GibbsSobolev*`, `cd_euclid_iff`, GP `bakryEmeryGibbs*`; (b) CR `OUKernel`, GP `GaussianLSI*`, `HermiteOrnsteinUhlenbeck`; (c) CR `Riemann/*`; (d) GP `TwoPointLSI`, `BernoulliCubeLSI` |
 | `Stochastic` (separate `lean_lib`) | Brownian vector processes and existence, augmented filtration, Riemann-sum Itô integrals, Langevin SDE for κ-convex V, Langevin kernel = P_t, Dynkin martingale, LSI via Gaussian transfer | CR `Brownian`, `Langevin*`, `LangevinDynkinMartingale`; GP `AlternativeBakryEmeryBrownian*`, `IsBrownianVectorProcess`, `BrownianIntegral*`, `FiniteDimensionalIto*`, `bakryEmeryLangevinPath` |
@@ -393,7 +393,7 @@ Points to decide when sealing these definitions:
 **Sobolev spaces stay out of the core.** In the Markov-triple approach, the Sobolev space is the domain 𝒟(ℰ), obtained abstractly by closure. Identifying it with a concrete space such as H¹(e^{−V}dx) is a theorem about one instance. Unweighted ℝⁿ Sobolev theory and elliptic regularity (CR `DiffSobolevRn*`, `DiffEllipticRn*`) are only needed to construct the Riemannian instance. They should go into an `Instances/Riemann/Regularity` folder, kept small, and be replaced by Mathlib's `MemSobolev` and by the Armstrong / van Doorn–Nuccio material once it settles.
 
 **Dependency rule.**
-- `Divergences`, `Hilbert`, `MarkovTriple` and `FunctionalInequalities` depend only on Mathlib.
+- `Divergences`, `Hilbert`, `MarkovDiffusionOperators` and `FunctionalInequalities` depend only on Mathlib.
 - `Stochastic` and `Bridge` are separate Lake libraries in the same repository, so trouble in either cannot break the core.
 
 ---
@@ -411,7 +411,7 @@ Points to decide when sealing these definitions:
 - Rewrite the corresponding files in the projects as thin wrappers.
 
 **Phase 2. Seal the Markov-triple definitions.**
-- Write `MarkovTriple`, `FullMarkovTriple`, Γ₂, CD, PI, LSI, Fisher information and P_t as a one-declaration-per-file frozen surface.
+- Write `MarkovDiffusionOperators`, `FullMarkovTriple`, Γ₂, CD, PI, LSI, Fisher information and P_t as a one-declaration-per-file frozen surface.
 - Have independent audits check them against BGL.
 - **The user approves the statements** before any proof work begins.
 
@@ -462,8 +462,8 @@ Points to decide when sealing these definitions:
 
 ## 7. Open decisions for the author
 
-- **Name** of the repository and of the Lean namespace (e.g. `MarkovTriple`, `BakryEmery`, `DiffusionOperators`).
-- **Whether `MarkovTriple` is a `structure` (data) or a `class` on (E, μ).** A structure is recommended, because several triples on the same space are common: generators at different temperatures, and products.
+- **Name** of the repository and of the Lean namespace (e.g. `MarkovDiffusionOperators`, `BakryEmery`, `DiffusionOperators`).
+- **Whether `MarkovDiffusionOperators` is a `structure` (data) or a `class` on (E, μ).** A structure is recommended, because several triples on the same space are common: generators at different temperatures, and products.
 - **Whether L is primary and Γ derived, or Γ primary and L derived** (BGL takes Γ and L together and requires integration by parts). Recommended: both are fields, with integration by parts as an axiom of the structure.
 - **Whether CD(ρ, n) with finite n is in scope from the start**, or only CD(ρ, ∞).
 - **Whether to depend on `MarkovProcess`** directly or through the optional bridge only. The bridge is recommended for now.

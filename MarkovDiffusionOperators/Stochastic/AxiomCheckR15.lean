@@ -1,0 +1,58 @@
+import MarkovDiffusionOperators.Stochastic.RepExtend
+import MarkovDiffusionOperators.Stochastic.OUFull
+import MarkovDiffusionOperators.Stochastic.Circle
+import MarkovDiffusionOperators.Stochastic.RieszFunctional
+import MarkovDiffusionOperators.Stochastic.RieszKernel
+import MarkovDiffusionOperators.Stochastic.RieszRep
+import MarkovDiffusionOperators.Stochastic.RieszMarkov
+import MarkovDiffusionOperators.Stochastic.MarkovProcessInterface
+import MarkovDiffusionOperators.BGL.Instances.Circle.Triple
+
+/-! Axiom audit of the round-15 stochastic layer (see `STATEMENTS_R15.md`). -/
+
+#print axioms MarkovDiffusionOperators.Stochastic.lintegral_sq_kernel_le
+#print axioms MarkovDiffusionOperators.Stochastic.kernelRep_of_dense
+#print axioms MarkovDiffusionOperators.Stochastic.kernelRep_of_testClass
+#print axioms MarkovDiffusionOperators.Stochastic.KernelBridge.ofTestClass
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.kernel_null_ae
+#print axioms MarkovDiffusionOperators.Stochastic.KernelRepresentation.ae_unique
+#print axioms MarkovDiffusionOperators.Stochastic.OU.ouKernelBridge
+#print axioms MarkovDiffusionOperators.Stochastic.OU.ouKernelBridge_isMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.OU.ouKernelRepresentation
+#print axioms MarkovDiffusionOperators.Stochastic.OU.ou_rep_full
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernel_zero
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernel_comp
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernel_invariant
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.integral_fourier_heat
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernel_rep_trigSpan
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleSemigroup
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleSemigroup_isMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernelBridge
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circle_rep_full
+#print axioms MarkovDiffusionOperators.Stochastic.exists_extend_addSubgroup
+#print axioms MarkovDiffusionOperators.Stochastic.exists_posFunctional
+#print axioms MarkovDiffusionOperators.Stochastic.exists_measure_of_pos
+#print axioms MarkovDiffusionOperators.Stochastic.measurable_of_integrals
+#print axioms MarkovDiffusionOperators.Stochastic.exists_kernel_of_posContraction
+#print axioms MarkovDiffusionOperators.Stochastic.bind_le_of_integral_le
+#print axioms MarkovDiffusionOperators.Stochastic.integral_semigroup_le
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernel_continuous
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernel_subInvariant
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernelRep
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernelRep_continuous
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernelRep_subInvariant
+#print axioms MarkovDiffusionOperators.Stochastic.compactTriple_isFiniteMeasure
+#print axioms MarkovDiffusionOperators.Stochastic.compactTripleKernelRep
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernel_univ_ae
+#print axioms MarkovDiffusionOperators.Stochastic.rieszKernelRep_markov
+#print axioms MarkovDiffusionOperators.Stochastic.MarkovProcessBridge.toKernelBridge
+#print axioms MarkovDiffusionOperators.Stochastic.KernelBridge.toMarkovProcessBridge
+#print axioms MarkovDiffusionOperators.Stochastic.ouKernel_measurable_joint
+#print axioms MarkovDiffusionOperators.Stochastic.ouMarkovProcessBridge
+#print axioms MarkovDiffusionOperators.Stochastic.circleKernel_measurable_joint
+#print axioms MarkovDiffusionOperators.Stochastic.circleMarkovProcessBridge
+
+/-! Non-vacuity: the general construction applies to the circle `CompactTriple`. -/
+example : Nonempty (MarkovDiffusionOperators.Stochastic.KernelRepresentation
+    MarkovDiffusionOperators.BGL.Circle.circleCompact.toDiffusionTriple) :=
+  ⟨MarkovDiffusionOperators.Stochastic.compactTripleKernelRep MarkovDiffusionOperators.BGL.Circle.circleCompact⟩

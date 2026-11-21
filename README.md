@@ -8,9 +8,9 @@ every public theorem depends only on `propext`, `Classical.choice`, `Quot.sound`
 
 ## Layout
 
-* `MarkovTriple/BGL/` — **the canonical development** (namespace `MarkovTriple.BGL`), aligned with the book's
+* `MarkovDiffusionOperators/BGL/` — **the canonical development** (namespace `MarkovDiffusionOperators.BGL`), aligned with the book's
   hypotheses D1–D9, S10–S11, F1–F10 (`BGL/Frozen/`: `DiffusionTriple`, `StandardTriple`, `FullTriple`, `CompactTriple`,
-  `CD`, Poincaré, log-Sobolev, …). See `MarkovTriple/BGL/FROZEN_REVIEW_BGL.md` for every field's book label and our choice.
+  `CD`, Poincaré, log-Sobolev, …). See `MarkovDiffusionOperators/BGL/FROZEN_REVIEW_BGL.md` for every field's book label and our choice.
   * `BGL/Calculus`, `BGL/Semigroup` — fundamental identity, chain rule, positivity, sub-Markov, conservativeness, ESA.
   * `BGL/Theory` — integrated Γ₂ identity, Poincaré / Lichnerowicz, finite-measure mass conservation, gradient bound and
     log-Sobolev from CD(ρ,∞) (under named regularity structures, discharged for the instances below).
@@ -18,15 +18,15 @@ every public theorem depends only on `propext`, `Classical.choice`, `Quot.sound`
   * `BGL/Analysis` — analysis ported from the removed first surface (statements unchanged): `Hilbert` (Friedrichs form →
     resolvent → generator → CFC semigroup, spectral gap, Beurling–Deny contraction criterion, truncations), `OU`
     (Hermite/Mehler, semigroup smoothing), `Circle` (Fourier modes, smoothing), `BE` (Grönwall/cut-off, entropy limit).
-* `MarkovTriple/Divergences` — entropy/total variation/Wasserstein (independent of `BGL/`).
-* The legacy first surface (`MarkovTriple/Frozen`, `Sanity`, `FunctionalInequalities`) was removed (DECISIONS 17).
-* `MarkovTriple/Audit`, `MarkovTriple/BGL/Audit` — hostile-audit probes (not imported by the root).
+* `MarkovDiffusionOperators/Divergences` — entropy/total variation/Wasserstein (independent of `BGL/`).
+* The legacy first surface (`MarkovDiffusionOperators/Frozen`, `Sanity`, `FunctionalInequalities`) was removed (DECISIONS 17).
+* `MarkovDiffusionOperators/Audit`, `MarkovDiffusionOperators/BGL/Audit` — hostile-audit probes (not imported by the root).
 
 ## Method (Armstrong style)
 
 Statements are frozen before proofs (`frozen-manifest.json`, checked by `scripts/check_frozen.py`, which also fences the
 definitions the frozen statements depend on). Each stage is attacked by an independent hostile auditor
-(`AUDIT_*.md`, `MarkovTriple/BGL/AUDIT_*.md`); findings are in `ERRATA.md`. **All frozen statements are still `proposed`
+(`AUDIT_*.md`, `MarkovDiffusionOperators/BGL/AUDIT_*.md`); findings are in `ERRATA.md`. **All frozen statements are still `proposed`
 (not author-approved).**
 
 See `PLAN.md`, `DECISIONS.md`, `CORRESPONDENCE.md`.

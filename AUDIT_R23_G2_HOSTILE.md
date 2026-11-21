@@ -1,6 +1,6 @@
 # AUDIT R23-G2 (hostile): `goFull` over `goDiff`, F10 as hypothesis
 
-Target: `MarkovTriple/BGL/Instances/GegenbauerOpen/Full/{Defs,PreFull,RegLocal,Sem,NotL2,Ergodic,Curv,Main,AxiomCheckR23G2}.lean`
+Target: `MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Full/{Defs,PreFull,RegLocal,Sem,NotL2,Ergodic,Curv,Main,AxiomCheckR23G2}.lean`
 and `STATEMENTS_R23_G2.md` (implementation commit 2307284, on main dc4119a). Verdict: **ACCEPT** (0 HIGH, 0 MEDIUM, 2 LOW).
 
 ## Plain statement of what is proved

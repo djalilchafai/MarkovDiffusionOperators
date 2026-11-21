@@ -3,9 +3,9 @@
 Verdict: **ACCEPT**.  No CRITICAL/HIGH/MEDIUM findings.  Merge of `worktree-agent-a742058ecf33a9679` (7603754 freeze, ae21d22 proofs) onto base 09dcbbe.
 
 ## Verification performed
-* Full `lake build`: "Build completed successfully (9572 jobs)", whole log contains 0 warnings/errors; the 9 new modules (GaussMeasure, MehlerBasic, L2Deriv, Duhamel, MehlerTime, MehlerL2, GaussIdentify, GaussBridge, AxiomCheckR30S) all compiled and are imported in `MarkovTriple.lean`.
+* Full `lake build`: "Build completed successfully (9572 jobs)", whole log contains 0 warnings/errors; the 9 new modules (GaussMeasure, MehlerBasic, L2Deriv, Duhamel, MehlerTime, MehlerL2, GaussIdentify, GaussBridge, AxiomCheckR30S) all compiled and are imported in `MarkovDiffusionOperators.lean`.
 * `grep sorry|set_option|native_decide|admit|axiom` over `R30/`: only a prose occurrence of "sorry" in the STATEMENTS Status line.
-* Own `#print axioms` (via `import MarkovTriple`) on `gaussRdFull_mu`, `gaussRdFull_semigroup_eq_Q`, `gaussRdFull_isTestClassRep`, `duhamel_unique`, `green_Qν`, `hasDerivAt_Mh_time`, `gaussRdFull_bridge_all`, `gaussRdFull_bridge`, `gaussData_bridge`, `gaussRdFull_bridge_kernel`: all exactly `[propext, Classical.choice, Quot.sound]`.
+* Own `#print axioms` (via `import MarkovDiffusionOperators`) on `gaussRdFull_mu`, `gaussRdFull_semigroup_eq_Q`, `gaussRdFull_isTestClassRep`, `duhamel_unique`, `green_Qν`, `hasDerivAt_Mh_time`, `gaussRdFull_bridge_all`, `gaussRdFull_bridge`, `gaussData_bridge`, `gaussRdFull_bridge_kernel`: all exactly `[propext, Classical.choice, Quot.sound]`.
 * `scripts/check_frozen.py`: OK.
 
 ## (a) Bridge genuine; `duhamel_unique` not circular

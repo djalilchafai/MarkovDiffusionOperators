@@ -1,4 +1,4 @@
-# `BEStable ouFull` and the Gaussian LSI (files `MarkovTriple/Sanity/OU/Mehler*.lean`, `BEReg.lean`, `BEStable.lean`)
+# `BEStable ouFull` and the Gaussian LSI (files `MarkovDiffusionOperators/Sanity/OU/Mehler*.lean`, `BEReg.lean`, `BEStable.lean`)
 
 Result: `ouFull_BEStable : BE.BEStable ouFull`, `ou_lsi : ouFull.toMarkovTriple.LogSobolevIneq (1/1)`;
 only `propext, Classical.choice, Quot.sound`; no sorry; BEStable was NOT weakened (no BE*.lean edit).

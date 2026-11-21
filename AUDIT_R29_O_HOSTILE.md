@@ -9,7 +9,7 @@ Verdict: **ACCEPT** (no doc fixes needed; no code issue found).
 * (c) λ = 1 (S³) confirmed (`lamZ k = k(k+2)`, `oFull_CD 2 3`). Survey annotations for `lebesgueFull` and `oStandard/oFull` are accurate; rows are annotated, not deleted.
 * (d) Honesty: ERRATA R29-O-1 and GAPS state explicitly that the frozen unconditional `gaussRdFull_bridge` was NOT proved and that the invariance theorem was renamed `mehlerKernelRd_bind`; survey row stays NO with annotation "still NO unconditionally"; STATEMENTS Status says the same. `(gaussRdFull d).μ = gam d`: the library's `gaussData` doc says "informally ... not proved here"; `μ` is `volume.withDensity (ofReal dens)` with normalised dens, so the equality is NOT `rfl`; it needs the Gaussian integral and a product-density identity (moderate, not a cheap one-liner). The agent's failure to prove it is therefore not a lapse; it remains an easy-ish follow-up. (ii) `IsTestClassRep` is the real hard part (documented).
 * (e) `84b0338` touches only `STATEMENTS_R29_O.md` and `frozen-manifest.json`. Manifest diff vs f0edf3a is exactly one added entry (5 lines, status proposed), no other hash changed, one occurrence; `scripts/check_frozen.py` prints OK.
-* (f) Only shared-file edits: manifest entry, one import block in `MarkovTriple.lean`, ERRATA rows, GAPS annotations.
+* (f) Only shared-file edits: manifest entry, one import block in `MarkovDiffusionOperators.lean`, ERRATA rows, GAPS annotations.
 
 ## Findings (severity ranked)
 * LOW: frozen names deviate (`mehlerKernelRd_bind` for `_invariant`; `gaussRdFull_bridge` only conditional): disclosed in ERRATA R29-O-1.

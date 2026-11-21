@@ -32,5 +32,5 @@ Verdict: ACCEPT. No doc change was necessary.
 5. INFO. The by-hand 1-D no-counterexample arguments and the "no mass loss at a single point" heuristic are labelled "not formalised / heuristic /
    by hand" in STATEMENTS, GAPS and ERRATA R29-P-2.
 6. Mechanical. Full `lake build` succeeded (9537 jobs), 0 warnings/errors in the whole log; no sorry/set_option/native_decide in R29P files;
-   `#print axioms` run by me on all seven theorems: only propext, Classical.choice, Quot.sound. MarkovTriple.lean imports the three new files.
+   `#print axioms` run by me on all seven theorems: only propext, Classical.choice, Quot.sound. MarkovDiffusionOperators.lean imports the three new files.
    The scratchpad script overwrite mentioned by the implementer did not affect the repo or manifest.

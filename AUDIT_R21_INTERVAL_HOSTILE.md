@@ -1,6 +1,6 @@
 # AUDIT R21 -- interval triple ((0,1), Lebesgue, C_c^inf((0,1))), hostile audit
 
-Target: `MarkovTriple/BGL/Instances/Interval/{Basic,Diffusion,NotComplete,NotESA,AxiomCheckR21}.lean`,
+Target: `MarkovDiffusionOperators/BGL/Instances/Interval/{Basic,Diffusion,NotComplete,NotESA,AxiomCheckR21}.lean`,
 `STATEMENTS_R21_Interval.md` (implementation commit 464dcf1, merged into this branch).  Verdict: ACCEPT.
 No finding above LOW.
 
@@ -28,7 +28,7 @@ None.
 
 ## What I verified
 
-1. Build/hygiene.  `lake build MarkovTriple.BGL.Instances.Interval.AxiomCheckR21` succeeds; `lake env lean` on each of
+1. Build/hygiene.  `lake build MarkovDiffusionOperators.BGL.Instances.Interval.AxiomCheckR21` succeeds; `lake env lean` on each of
    Basic, Diffusion, NotComplete, NotESA gives no output (0 warnings, 0 errors).  `grep` finds no `sorry` and no
    `set_option` in the Interval directory.  `#print axioms` of `ivA₀_dense, ivDiff, iv_ΓA, iv_Γ₂_eq, ivDiff_CD,
    abs_le_of_Γ, iv_not_complete, iv_exp_orth, iv_not_esaProp, iv_no_fullTriple`: only `propext, Classical.choice,

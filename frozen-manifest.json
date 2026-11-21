@@ -1,416 +1,416 @@
 {
   "files": [
     {
-      "path": "MarkovTriple/BGL/Frozen/CD.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/CD.lean",
       "status": "proposed",
-      "sha256": "7acd60c13251db8e15163e2ca58e5a652c7c67753b9e7bf0e0ecbe7756fc840e"
+      "sha256": "09e2d5961f0e0200a0893abe558cf18de18e3c0ec6f4178f21d20068cb404b71"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Classes.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Classes.lean",
       "status": "proposed",
-      "sha256": "309471af8c353d21f20c2784ed899a80800ac30290b98354024250d0587f013a"
+      "sha256": "9f03b5b9b47eeaabaca13e2749284bbeafdcc8345d462e9ab559ff88c66e31a0"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/CompactTriple.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/CompactTriple.lean",
       "status": "proposed",
-      "sha256": "34ff922449e7e97ab8d921b02189925823e782b0ddb223bca13cc788921883dc"
+      "sha256": "024dfae91a6dd5a7f23f71d24def1d3be179506a1341fcd614b35a574da9838f"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Complete.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Complete.lean",
       "status": "proposed",
-      "sha256": "5cc1d459d49a796b5503dd2d9b44ebd52c544b266460c5e6cc081d2a1ace1864"
+      "sha256": "56b34b49292212b2fdcd79d7a5659ce56ff532895ada0067b2e6bc6b2df5ee2b"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/DiffusionTriple.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/DiffusionTriple.lean",
       "status": "proposed",
-      "sha256": "9d4365287f30af9c50d7861b6f837b211b760e861f84a176a1b5a77c3e4b2725"
+      "sha256": "9e0a3455061f113c94cf67412472633b9b65787dab193635f498777733aab7ca"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Energy.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Energy.lean",
       "status": "proposed",
-      "sha256": "ca9e62b6f01d215d4eb7fa964243d32dac4eb318023498ee8938668752e6cae0"
+      "sha256": "3b37d5c18998440c881dd4d3013d5b565a5f37aecfe9675554aed7fcd22c5deb"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Ent.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Ent.lean",
       "status": "proposed",
-      "sha256": "b93077e75ffe48deeb787580ba5dfc35a02fc2bd8444684c2dfa2a71946b5182"
+      "sha256": "7ca1078b1d9f9acf751fe9e3f5f1fd2bc293d27f2386fede1334587046bc8a09"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Exhaustion.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Exhaustion.lean",
       "status": "proposed",
-      "sha256": "7ecded301dac1f0d1cc142748362bba148f95598e4e19db47a818f1e0dac8038"
+      "sha256": "b280525b0b3db14dc497713a51a3ef9819d84b6227c857f53f196205d0aec419"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Fisher.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Fisher.lean",
       "status": "proposed",
-      "sha256": "b00444f25c4ddd3c0bc5b7415b573adf5efcf741de42cf288f4e3c4b74b1dd2b"
+      "sha256": "e39a91111bf7d61cb567b114dfee6f1b0ff414ec25d61d2d444727473357115b"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/FormDomain.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/FormDomain.lean",
       "status": "proposed",
-      "sha256": "dc0cb30fc2a6781725cc8634b4ca7f14415376f3fbdaf2627a85d18b3cc9f6ce"
+      "sha256": "694883e60ce70fd7fb8e7511c1f6de732914e381fb209f0ced7fac768c963206"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/FullTriple.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/FullTriple.lean",
       "status": "proposed",
-      "sha256": "ff418074961a38ef45ee8ff8bb9ed460745bca25b84b031b8c22bb50282903db"
+      "sha256": "9c27d1b1426baa0401abfe1af0e5b13e1936d5c7a463add927e3834add01be81"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Gamma2.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Gamma2.lean",
       "status": "proposed",
-      "sha256": "76510cd032f81b963a6dc293dac0810ef7ec64da4a58146dea8e1f770ed4bdd3"
+      "sha256": "fd20e4959c751f98505e1e301e843dc886d3b411e3942e34d8756a0a982f142b"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/GammaA.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/GammaA.lean",
       "status": "proposed",
-      "sha256": "7df4a857c60f8fc7397218819ecda67e46bb0b01e3252e3ed60e7445f922455b"
+      "sha256": "028c385c3c531691b86f9a23a2af1ba8196299c7daa8c134e01c5992e34a6a98"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/GoodMeasure.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/GoodMeasure.lean",
       "status": "proposed",
-      "sha256": "8ec19bc4b7cff51b6722cff56fbb051bbd94c98387db3d1cfc96030598899e9a"
+      "sha256": "b56dc753faf4bc1c4fd57a5a20ddee0e874ec42b3a6dd0d4fb6d6745aaa0782e"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/LSI.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/LSI.lean",
       "status": "proposed",
-      "sha256": "9a9de836d1ce1347072781f1d74cc6ab11a08ba13c22dfc8c1f6a37ef9da23e0"
+      "sha256": "fabf24ca32f2462e1e99114bd766a2b78f3e4d49cc3ba0767cc9d5213bbe046a"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/PartialDeriv.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/PartialDeriv.lean",
       "status": "proposed",
-      "sha256": "a4401f6e6bfae088bd6dd502724d4f20d77fe28cc04e7dcfbd1f8307fc1914d5"
+      "sha256": "217f82a4624fcc893c9b294a69547794892790d1ea8fba9cb3f58953b5af8aac"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Poincare.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Poincare.lean",
       "status": "proposed",
-      "sha256": "ad4a4785807439cf627875d3d4ef0ace5b4a156573377bedbd00d9b5a41d4ec9"
+      "sha256": "d38ad56dd9d763003b8f3a49594193fc624a2e00abbbcaa81c0fb5816a672ce9"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/Semigroup.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/Semigroup.lean",
       "status": "proposed",
-      "sha256": "0e4c1ebf61161babd5e7ce8742f53880be19603d2ee340de324dd46dff701037"
+      "sha256": "1f0af929a2d20fca2620fd98ce7d30c7088e233b7c6863ddb89436725869d3ae"
     },
     {
-      "path": "MarkovTriple/BGL/Frozen/StandardTriple.lean",
+      "path": "MarkovDiffusionOperators/BGL/Frozen/StandardTriple.lean",
       "status": "proposed",
-      "sha256": "4e5eb37529ec0b3f8450877b3f11c831d86af5f9fd6920ca721b6f22b4a120ba"
+      "sha256": "3f4b60406cf8d458803e53d6b0008c99a9c9d756fa6592595e79c8f8a660d60d"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/STATEMENTS_R15_Riem.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/STATEMENTS_R15_Riem.md",
       "status": "proposed",
-      "sha256": "57f7bb3eefa178f9c7fa2bef8d81402d26042abae4f9643970afe46840ed5ea6"
+      "sha256": "e6be3f9491d3b5a5b9c76727952388be7bab86601ea6ce4da9882877140563e0"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/STATEMENTS_R16_Bochner.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/STATEMENTS_R16_Bochner.md",
       "status": "proposed",
-      "sha256": "02e98eb4c623ffde3f6a740c81a4c573b1c71634d4cf4265a94423e59c6d9114"
+      "sha256": "9b31de1ba6cf669203e4040dd5f049fe56d338a8fee95375da02b329714bc54b"
     },
     {
-      "path": "MarkovTriple/Stochastic/STATEMENTS_R17.md",
+      "path": "MarkovDiffusionOperators/Stochastic/STATEMENTS_R17.md",
       "status": "proposed",
-      "sha256": "26a7f0189fdcf80001701908514af4ccd83f0ed28b57b1d527260b096a8598d1"
+      "sha256": "b0e567d145a2baeea2a8da730103fb1f7628aa7adbe3246283f87159f2804610"
     },
     {
-      "path": "MarkovTriple/Stochastic/R22/STATEMENTS_R22_E3.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R22/STATEMENTS_R22_E3.md",
       "status": "proposed",
-      "sha256": "ea514e1f6f22d9194e01c9c47ef1f93c3385eda66061bf7bf792a8c19343b300"
+      "sha256": "25e786800a82c46cd7798bdad168195ed891ff6508c589fd610539bf512f59d5"
     },
     {
-      "path": "MarkovTriple/Stochastic/R23/STATEMENTS_R23_S.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R23/STATEMENTS_R23_S.md",
       "status": "proposed",
-      "sha256": "87f9ec2994122e45b09db29e3d1ec38e5ecef095c08660b03067bfe84de0e9b0"
+      "sha256": "e1465367a277147686396fc6b7df60e74809d00f802787036b609ce845297801"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GibbsRd/STATEMENTS_R17_SobSharp.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GibbsRd/STATEMENTS_R17_SobSharp.md",
       "status": "proposed",
-      "sha256": "b8dd37757d3e6af13c637ced50f23989020999fcc53cb68a98945323ad85a63b"
+      "sha256": "b88223f49cad8a0596d4396b588ee5f64ba1eac7d97fe1f368d51bb957ebc615"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereOpen/STATEMENTS_R17_Noncompact.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereOpen/STATEMENTS_R17_Noncompact.md",
       "status": "proposed",
-      "sha256": "bf503407672dff336f6411fcaab81b4e872c4e09166b44d5a9a6e63b90a29947"
+      "sha256": "b577fda1d39cf3e2001a65e14c6de69c5b816216e633de80ae7270db355380e5"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Gibbs/STATEMENTS_R17_Core2.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Gibbs/STATEMENTS_R17_Core2.md",
       "status": "proposed",
-      "sha256": "6a5a7622d90c9463c585140ce53e474da97a1408c81edc3658b79f0974b3527b"
+      "sha256": "4fb186b1bfec61dc98d51f61d3d99a3a3f1412a4700d075ab4616d12d5faa58c"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/STATEMENTS_R17_Riem.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/STATEMENTS_R17_Riem.md",
       "status": "proposed",
       "sha256": "54f73c3f4fe14543ba6a8900e1b6a8059b111f43e74735fd6a8df11b10f6bb6c"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GibbsRd/STATEMENTS_R18_Core2Rd.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GibbsRd/STATEMENTS_R18_Core2Rd.md",
       "status": "proposed",
-      "sha256": "1de98f646f6035351b1a5730c8d7b8ed7c648b5dc2656efb730a67c9f167a746"
+      "sha256": "adef41947dcb32752b063396d147e23aadfe26a1c22675af41cb138a98b5f3d2"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Gibbs/STATEMENTS_R18_Core2.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Gibbs/STATEMENTS_R18_Core2.md",
       "status": "proposed",
-      "sha256": "a6bcbb716e2de8ad0cc6f9fcd00cb9a41c1f9fc59fb12bfe4eeea682b39911d1"
+      "sha256": "84fed42debb76661c1636012c34d9ba0c39e6cea2741286476a6cce87915726d"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Gibbs/STATEMENTS_R19_Core2.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Gibbs/STATEMENTS_R19_Core2.md",
       "status": "proposed",
-      "sha256": "bec2b6eac8216619107144e23d13512227baae55d5b609e0dd07a0c30945dca5"
+      "sha256": "78c4cbbdd442ad971b663492c9b768fa9798ec0b7ffca45ab0fa34e47be41f6f"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GibbsRd/STATEMENTS_R19_Core2Rd.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GibbsRd/STATEMENTS_R19_Core2Rd.md",
       "status": "proposed",
-      "sha256": "822be77859da4037372632b86a883c9aa6d6d88731c86a9040285f777cadf3e0"
+      "sha256": "c3db6a0f0b15beff1c1f702f03124d44191e5139d8ef3d7c65de9172d646f8ac"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GibbsRd/STATEMENTS_R19_Core2Ell.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GibbsRd/STATEMENTS_R19_Core2Ell.md",
       "status": "proposed",
-      "sha256": "c8cb6ebc7a425adaf60294ae862eba4b63b2bf34179b20277664692aa61a8602"
+      "sha256": "1c4f391fe9f26e399ca94418be89d1c0561e3e023f79d134419727ea03a04679"
     },
     {
-      "path": "MarkovTriple/BGL/Theory/Extension/STATEMENTS_R20_ConverseDirect.md",
+      "path": "MarkovDiffusionOperators/BGL/Theory/Extension/STATEMENTS_R20_ConverseDirect.md",
       "status": "proposed",
       "sha256": "da46db607e7fe5ddea728851543da9f6778e9c8fb63aca6d6bc8df30c6b19d15"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GibbsRd/STATEMENTS_R20_DirectEll.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GibbsRd/STATEMENTS_R20_DirectEll.md",
       "status": "proposed",
       "sha256": "1e2374400e302e8c28552f89cc07e1c2cb59022714261fd9f87b54c6a9c03cb7"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Gibbs/STATEMENTS_R20_Direct.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Gibbs/STATEMENTS_R20_Direct.md",
       "status": "proposed",
-      "sha256": "c041fabfc0de9b1d794fba61e1f8e04198477dc5f97974c239685d8fdaa90217"
+      "sha256": "92316372d4ada18abdef8d4436ecc103d06bcb1ac997eb0c3151b62483e6af00"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Interval/STATEMENTS_R21_Interval.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Interval/STATEMENTS_R21_Interval.md",
       "status": "proposed",
-      "sha256": "a8552185c6010e05ff1b95ef4c0779c48a21258195499add19e09f67bfdc2c74"
+      "sha256": "0dbb460d5cab12b79dd44c2a9fa9b1a672a1f0668700881f194d716d6847901e"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/IntervalGen/STATEMENTS_R22_E1.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/IntervalGen/STATEMENTS_R22_E1.md",
       "status": "proposed",
-      "sha256": "42ea9e154ef9ddfc712d18b0550bd0c4d99c67c993430124ad5d0217aef19846"
+      "sha256": "a18c1615fac3af87f509a9191a0098fb405c14bf74c6de5d305e59d30e7ea750"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/STATEMENTS_R22_E2.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/STATEMENTS_R22_E2.md",
       "status": "proposed",
-      "sha256": "4482ccdccb13e6f9e3ecc7e76f5c0c17dee3aa9f5e008c09ab28bf936a53482b"
+      "sha256": "9f04b9a3563743f28bf16db49d8914e3b48808db4cd54b892d05909921090c7b"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/ESA/STATEMENTS_R23_G1.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/ESA/STATEMENTS_R23_G1.md",
       "status": "proposed",
-      "sha256": "f6a142313c0f378fc36020d6de5b8457e78cc543f63170a01c2caccdcc8fbbbb"
+      "sha256": "8d7e2d6613a16aecfc3bd823a6abe713f0640158f482cb6d04527fc72c2c1bbd"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/Full/STATEMENTS_R23_G2.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Full/STATEMENTS_R23_G2.md",
       "status": "proposed",
-      "sha256": "bd260b0ceb5b1ddc5640ce7cbd66bb2ee7542f21b028135e970b13478efafa4e"
+      "sha256": "72097a50a4603cb0edc36e0ed5846497cf0df681e441a9e9bcbb48546b56e811"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/R22/STATEMENTS_R22_E4.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/R22/STATEMENTS_R22_E4.md",
       "status": "proposed",
-      "sha256": "099e37f90395490d158e75ec8b1bde59ec6e8b19f1120d38bd9ef6274589894c"
+      "sha256": "8f5b48aaca9ad9addfb429ae65010bdaa7e877223a949440b18fadb75b1b2d5e"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/LebesgueRd/STATEMENTS_R23_R.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/LebesgueRd/STATEMENTS_R23_R.md",
       "status": "proposed",
-      "sha256": "a0c40207619cb92d0539988547b747ac00dc4521a47c6fead0f673997862e955"
+      "sha256": "ff70f09e83aed6add0842e7ffe5327d24f21621d8d5737f86c145c9bf9205337"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/LebesgueRd/Full/STATEMENTS_R24_A.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/LebesgueRd/Full/STATEMENTS_R24_A.md",
       "status": "proposed",
-      "sha256": "54c18a544c9c7657f93e062b1d29626d8715a2f2f849ae8fce1f182cfb892aab"
+      "sha256": "582512018b6de89e7677bd41352ddf4a89f1b9d49e653065c6d62a19639f0049"
     },
     {
-      "path": "MarkovTriple/Stochastic/R24/STATEMENTS_R24_C.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R24/STATEMENTS_R24_C.md",
       "status": "proposed",
-      "sha256": "e58e42760ff4a3a9c37f73d99b099e4fd899b040970cb9714738a04d24dd48a5"
+      "sha256": "0b410fe75cef5f733b58a8a5d2e83cb6ab7354acae5e1cf5f99a4a91eafd251e"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/R24/STATEMENTS_R24_D.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/R24/STATEMENTS_R24_D.md",
       "status": "proposed",
-      "sha256": "b63851be0821f7cf2585d6562dce6b80272edcd273e48215c027419680514097"
+      "sha256": "85ac0f8f323b72d07b467b73b318b1f961a3e109dce26e8540860331db89de88"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/Converse/STATEMENTS_R24_B.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Converse/STATEMENTS_R24_B.md",
       "status": "proposed",
       "sha256": "16d1a34a31ffd07eed5b02e36046d4ac896fd3a71ef5c2d42914691037039c86"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/LebesgueRd/Core2/STATEMENTS_R25_F.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/LebesgueRd/Core2/STATEMENTS_R25_F.md",
       "status": "proposed",
-      "sha256": "c97955b813c6c4073d4a7711e48a3e4ae7e850fb238af2082647a66278ed52a2"
+      "sha256": "f34911fcbb00198cdddee631495060fb2e236d3f4ab57815446960ecbdc1e827"
     },
     {
-      "path": "MarkovTriple/Stochastic/R25/STATEMENTS_R25_E.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R25/STATEMENTS_R25_E.md",
       "status": "proposed",
-      "sha256": "f3aa073dabd3e2745375c8b7b7cb704f7d2d037ba151d10542edd95df607369e"
+      "sha256": "743b8e67b5d886d40d6ae3fe9aa9ea243cfd03c6f69835a066690dd05d3eef6b"
     },
     {
-      "path": "MarkovTriple/BGL/Theory/Extension/R26/STATEMENTS_R26_I.md",
+      "path": "MarkovDiffusionOperators/BGL/Theory/Extension/R26/STATEMENTS_R26_I.md",
       "status": "proposed",
-      "sha256": "8ad027a2f976dc15785a72c9c36751b31803a5e7be3145bd76a5eaed0b236f75"
+      "sha256": "b5ed3396abb9e5d623321e9b29bbb0ca924a2d56c2394a51ea52453acfe6a631"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/R26/STATEMENTS_R26_H.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/R26/STATEMENTS_R26_H.md",
       "status": "proposed",
-      "sha256": "73a2b2d3010a487b2b65770f114ff7c6dcaf131e8d534f52572464ab3a1dfced"
+      "sha256": "0e71e2b0870659cada78e0c688d72083c888bacac12a7dd4723b6925a837125a"
     },
     {
-      "path": "MarkovTriple/Stochastic/R27/STATEMENTS_R27_K.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R27/STATEMENTS_R27_K.md",
       "status": "proposed",
-      "sha256": "03b782712ea9719cdc2d53695695bde056cdd4b32134d752c242255b500a426d"
+      "sha256": "53301248da2244a887698381ec09c48037d816650aeac8b199e752850acea584"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/Riemannian/R27/STATEMENTS_R27_J.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/Riemannian/R27/STATEMENTS_R27_J.md",
       "status": "proposed",
-      "sha256": "27f108899bbc3ad2510906eadcd8eb652610e5b81913269078163e1a3025ffd6"
+      "sha256": "d348fc27c415e3fbf5b47743cf3b270111d2e6401c4e29cde1d14799382750f4"
     },
     {
-      "path": "MarkovTriple/Stochastic/R28/STATEMENTS_R28_M.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R28/STATEMENTS_R28_M.md",
       "status": "proposed",
-      "sha256": "269d572a6990f199952f7d27f13fb3068f43b2113c8ed9a60fb4d5cea2d6d7b5"
+      "sha256": "21b6a2caf9a77435804b4618971d50d9854a811c8b02ff9ffbafc24216acaf93"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereN/STATEMENTS_R28_L.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereN/STATEMENTS_R28_L.md",
       "status": "proposed",
-      "sha256": "5d180d13cac301dd50b4b98bb62953196f14e5332f1c34cb6f373c90598ef5e1"
+      "sha256": "1fdc4ba0d16b47cce6e53a4f11c2e3b097f14b4cc2e5dc1a5281982e24d143e8"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/Core2/STATEMENTS_R29_Q.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Core2/STATEMENTS_R29_Q.md",
       "status": "proposed",
-      "sha256": "b92f3114b1557de9370f5e1c84c535c046594b9cbb40d273d9e1c3223ee66955"
+      "sha256": "262304426c04beef8244c14d41dcce316368a89d82f6c9537e8f5f7553ce2e6e"
     },
     {
-      "path": "MarkovTriple/Stochastic/R29P/STATEMENTS_R29_P.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R29P/STATEMENTS_R29_P.md",
       "status": "proposed",
-      "sha256": "7692bacc97d0223afc5698a5f7e8d05c0be9d64c9cf2c1c6c092efc768f8fe78"
+      "sha256": "6a1b04676841dcf84477ed6730730e3aa007a7e037df46c612ecf1f27b1ac859"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereN/Full/STATEMENTS_R29_N.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereN/Full/STATEMENTS_R29_N.md",
       "status": "proposed",
-      "sha256": "78b8eb1c4ed0ae0e18034fc0f8d74fe623782adec0169435b8638a37de1d5d88"
+      "sha256": "62e6267ba4216bb034a28cdd8569d1036eb9fae2d044678a18127d66b947bd61"
     },
     {
-      "path": "MarkovTriple/Stochastic/R29/STATEMENTS_R29_O.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R29/STATEMENTS_R29_O.md",
       "status": "proposed",
-      "sha256": "5497132cddfe9946e277ef11096f1a5a725d0c59f11dcc51556dd0d9c323892c"
+      "sha256": "9ddbbf59abea62cb91b6f86d02eb56ca172cb1b960a8d17157483f437b07f265"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereN/Atlas/STATEMENTS_R29_R.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereN/Atlas/STATEMENTS_R29_R.md",
       "status": "proposed",
-      "sha256": "40c7aabdccea0a8b89a14156d86a5c9195761aa2677847a511eefc3cb2b7b54e"
+      "sha256": "3040c8a61a89770af900e74de5bfb5fed0a21e0d615d42ab5a2d86d6ad0e89e3"
     },
     {
-      "path": "MarkovTriple/Stochastic/R30/STATEMENTS_R30_S.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R30/STATEMENTS_R30_S.md",
       "status": "proposed",
-      "sha256": "77a5559b8f98063be8167c1810981f8bbafa47ce31142575bb21f2f7283e5dde"
+      "sha256": "fc9ae3aa842b8f1044f8705f5a93b06d7577b1c16713538469d28534516a051d"
     },
     {
-      "path": "MarkovTriple/Stochastic/R30T/STATEMENTS_R30_T.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R30T/STATEMENTS_R30_T.md",
       "status": "proposed",
-      "sha256": "8a1d952c647b67f23f0c98a51d88558ce380d2a35aa965054195b768348c6c50"
+      "sha256": "a4176b50e5412c61ac6a0fedd83dd43ce69f63b7b4278e4cc46392264a56d1f0"
     },
     {
-      "path": "MarkovTriple/Stochastic/R31X/STATEMENTS_R31_X.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R31X/STATEMENTS_R31_X.md",
       "status": "proposed",
-      "sha256": "d2f956dfff40dcec287c939821f94b40a5a84260eb4d2c3aca225e03b7c09df4"
+      "sha256": "dfb7b095fb615eb479162f8235305350e6a9dec04bbee4067aac796e8381a2b8"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereN/Full/STATEMENTS_R31_V.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereN/Full/STATEMENTS_R31_V.md",
       "status": "proposed",
-      "sha256": "65f01de360c4b89a87e77d3b71df4cefc30ab395e83a68a3ed32c70237cad711"
+      "sha256": "9de1629dbe07ad5dfc0f1539600f2732b440796691f12bd13e6fc0bf30512a6f"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/Core2/W/STATEMENTS_R31_W.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Core2/W/STATEMENTS_R31_W.md",
       "status": "proposed",
-      "sha256": "85902d0cac990abbbae313f9895442526252be7ecf4783d514dab6e95483d3ec"
+      "sha256": "aa0a6114e85482c8337ea32fb931039430ea81cf5a59639fee94d2df60e9c52a"
     },
     {
-      "path": "MarkovTriple/Stochastic/R31U/STATEMENTS_R31_U.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R31U/STATEMENTS_R31_U.md",
       "status": "proposed",
-      "sha256": "06055ecbbd22b6154a15bf49602a6e29119f44791f5d8a9dc72e13dc9a63be53"
+      "sha256": "8fd263b3b7ba69e9e9dc6efc0f722286c2cedc295ebcb383dc2e5f839bc2dae4"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/GegenbauerOpen/Core2/Z/STATEMENTS_R32_Z.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/GegenbauerOpen/Core2/Z/STATEMENTS_R32_Z.md",
       "status": "proposed",
-      "sha256": "65a6f3757ed64e250876c846356cc480fb761eacfdac3d1d7d257e834703915b"
+      "sha256": "ae3851d89b52896bbfcc919657c89fdf9db40ac09d2e716eef65b6de8533e40b"
     },
     {
-      "path": "MarkovTriple/Stochastic/R32B2/STATEMENTS_R32_B2.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R32B2/STATEMENTS_R32_B2.md",
       "status": "proposed",
-      "sha256": "1d113e2b5f801479572dbea664bd872a5c7fe9b82f9506917c80d05491a1fcc9"
+      "sha256": "a72d6f188e0d1ac85f6fa9986d64dad55409d4aaf8387cce15c2fa826751978f"
     },
     {
-      "path": "MarkovTriple/BGL/Instances/SphereN/Full/STATEMENTS_R32_Y.md",
+      "path": "MarkovDiffusionOperators/BGL/Instances/SphereN/Full/STATEMENTS_R32_Y.md",
       "status": "proposed",
-      "sha256": "67f623e416215d2e9d44c166a45b7fcf66a24c03b8f0d057afc7398170d3ba14"
+      "sha256": "694678af37accb86d5ee77d6a12f964e43b7cfbfaa417a85773fab08a08f47c1"
     },
     {
-      "path": "MarkovTriple/Stochastic/R32A2/STATEMENTS_R32_A2.md",
+      "path": "MarkovDiffusionOperators/Stochastic/R32A2/STATEMENTS_R32_A2.md",
       "status": "proposed",
-      "sha256": "8e86089d47576b77ae50468926d32d73749cda34abdff1eae46622cc0dcc6dc0"
+      "sha256": "2ebeb26aa7c1742412cf4e6a87a47a821b901e2c04454b1c8f55267ac3a00835"
     }
   ],
   "fenced": [
     {
-      "path": "MarkovTriple/BGL/FormData.lean",
+      "path": "MarkovDiffusionOperators/BGL/FormData.lean",
       "status": "fenced",
-      "sha256": "6a8649709a948baec3e037be54c4f54e1637e9a96c9f282d0598426aa9fc3aaa"
+      "sha256": "99183d111395daf7015bf27800104f408ca9a9b844ed22ffe2d1cf204567987f"
     },
     {
-      "path": "MarkovTriple/BGL/Basic.lean",
+      "path": "MarkovDiffusionOperators/BGL/Basic.lean",
       "status": "fenced",
-      "sha256": "2a395c468bce6b74b85e8cb0e6f34b9abedbc7fc6b1993f94fb43f8a45fd7e99"
+      "sha256": "ccd8a784f27536797635d2070e04be34b8d5cb636bb23055b8289d037356b282"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/Friedrichs.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/Friedrichs.lean",
       "status": "fenced",
-      "sha256": "295923aeb351052e9e4e0b249b5bca0cade18d675c11e4f5e1b56204e66caa33"
+      "sha256": "ef9ca760d7add3dc25b28140b11846a36c5006b74286f4ec65c534a728d1afba"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/Resolvent.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/Resolvent.lean",
       "status": "fenced",
-      "sha256": "9dc06fa4551c028404a8bf55aec571ee0e5fb9cede224ce169a5360c23bbe735"
+      "sha256": "b921b83307c210d5b5d5e9f54eb3151b0de07113f85043e7de5290a00561d811"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/Generator.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/Generator.lean",
       "status": "fenced",
-      "sha256": "2fe80e6b6491618d92d09ace101543a65e451daf607e079358d2f7774060a135"
+      "sha256": "e467c9900b6fbf396b07e2fcd1cc8560386d36a18b6b5538b10a022e5b43c4c5"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/SemigroupDeriv.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/SemigroupDeriv.lean",
       "status": "fenced",
-      "sha256": "7505491e4242bd92179c5306e73a86bd73127b81b3cbdd2c4d42cb394c2e76b9"
+      "sha256": "e401aaf9ce6e4f3fb84398dae951a7bc0ee12a2fd47c5c33607ac0f62be7932d"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/SemigroupSmoothing.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/SemigroupSmoothing.lean",
       "status": "fenced",
-      "sha256": "a2a8c47132e408b547077666598bb620fe927db69d902b7adcec4396aa3d2420"
+      "sha256": "c22e6020232f7c501ac57c50fe2ba5e2b993e68d33b93c8d407431d16aec5dc8"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/CfcSemigroup.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/CfcSemigroup.lean",
       "status": "fenced",
-      "sha256": "e310679a8405af50095b557ac80eb262dc76bb766a0f6cc10779b13300575c22"
+      "sha256": "3c5a319152daf1b1da651ead4a5d7c952a4f216a5822efc5f21467181d523b7e"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/Complexify.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/Complexify.lean",
       "status": "fenced",
-      "sha256": "f50b3010f7dd041523c8d923100150a118075f2ccb446d445e0b952a2b9a2ebb"
+      "sha256": "0325ea582f179de065f728384ca02c0e5584f612eb908c77f0399b47ac34b4e2"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/ResolventGenerator.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/ResolventGenerator.lean",
       "status": "fenced",
-      "sha256": "1eabe65b093ff6fe5f435b9f7c712c560c04174f4d633e01da59c096f197e0e0"
+      "sha256": "718a8b85478ed2f0b2bd6939b6b4c24c51e38ddd6c9acda64c2d583bf11b6278"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/Existence.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/Existence.lean",
       "status": "fenced",
-      "sha256": "20d4e4240f094923e0e25018590a17ff76e58387a8e71cabe7df17def00a1edc"
+      "sha256": "e1bdd7170bb80e034d46fb5f555476a276ac8ec9f536b15129723f843f7eb5c5"
     },
     {
-      "path": "MarkovTriple/BGL/Analysis/Hilbert/SpectralGap.lean",
+      "path": "MarkovDiffusionOperators/BGL/Analysis/Hilbert/SpectralGap.lean",
       "status": "fenced",
-      "sha256": "b430ec83a79e963fb08310322201fcbf89aaa8721f24cdc4f59ef17fd97ca581"
+      "sha256": "efa485b66d6a79fa20355ed96cc7f1352255a175785b6dead42f7cd167c8bd7d"
     }
   ]
 }

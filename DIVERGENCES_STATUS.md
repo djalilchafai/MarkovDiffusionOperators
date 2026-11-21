@@ -1,8 +1,8 @@
 # Divergences layer: port status
 
 Prover/extractor output for Phase 1. CR = cutoff-rigidity-diffusions (`CutoffRigidity/`), GP = ginibre-poincare
-(`GinibrePoincare/Analysis/`), CF = cutoff-fastdiff (`Cutfast/`). All files are in `MarkovTriple/Divergences/`,
-namespace `MarkovTriple`, no `module` system, plain `import Mathlib`. All entries are fully proved (no sorry, no axiom,
+(`GinibrePoincare/Analysis/`), CF = cutoff-fastdiff (`Cutfast/`). All files are in `MarkovDiffusionOperators/Divergences/`,
+namespace `MarkovDiffusionOperators`, no `module` system, plain `import Mathlib`. All entries are fully proved (no sorry, no axiom,
 no maxHeartbeats change); `AxiomCheck.lean` verifies that every declaration depends only on
 propext / Classical.choice / Quot.sound.
 Ported files have NOT been audited by a separate hostile auditor yet.
@@ -39,6 +39,6 @@ Ported files have NOT been audited by a separate hostile auditor yet.
 
 - Euclidean / Lipschitz Kantorovich duality: CR `EuclideanTransportDuality`, `EuclideanLipschitzTransportDuality`, `CompactLipschitzTransportDuality` (+ `EuclideanCompactClipping`, `TransportCouplingCompactness`, `TransportMoments`, `CompactLipschitzApproximation`).
 - `RelativeLpDistance.lean` (chi^2, relative L^p distance): imports Langevin-specific files (`LangevinL1Density`, `EntropyL2Bound`); needs untangling. Hellinger (`HellingerL2Convergence`) likewise.
-- `KLCompactVariational`, `KLWeakLowerSemicontinuity`, `Talagrand`-type consequences; GP `EntropyL2Closure`, `SquareEntropyLinearization`, `EntropyLimitStability`; Gaussian W2 in CR; CF `Radial`, `Sphere`, `Asymptotics` (the `ForMathlib/` side; `MarkovTriple/ForMathlib/` is empty).
+- `KLCompactVariational`, `KLWeakLowerSemicontinuity`, `Talagrand`-type consequences; GP `EntropyL2Closure`, `SquareEntropyLinearization`, `EntropyLimitStability`; Gaussian W2 in CR; CF `Radial`, `Sphere`, `Asymptotics` (the `ForMathlib/` side; `MarkovDiffusionOperators/ForMathlib/` is empty).
 - Triangle inequality for `W2` (needs gluing lemma; not in any source repo as a standalone result).
 - Rewriting the three projects as thin wrappers (Phase 1 second bullet) not started.

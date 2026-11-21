@@ -5,7 +5,7 @@ Usage: scripts/check_frozen.py            check
        scripts/check_frozen.py --update   (re)write hashes (drafter only; keeps statuses)
 
 Two lists in the manifest:
-* "files":  the frozen statements (MarkovTriple/BGL/Frozen; the legacy first surface MarkovTriple/Frozen
+* "files":  the frozen statements (MarkovDiffusionOperators/BGL/Frozen; the legacy first surface MarkovDiffusionOperators/Frozen
             was removed, DECISIONS 17); any new .lean file in that directory must be listed.
 * "fenced": NON-frozen files whose *definitions* the frozen statements unfold to (M1 of the BGL
             audit: e.g. `DiffusionTriple.semigroup` = `(formData T).semigroup`).  They are hashed too,
@@ -38,7 +38,7 @@ for e in manifest["files"]:
         print("MISSING", e["path"]); bad += 1
     elif sha(e["path"]) != e["sha256"]:
         print("CHANGED", e["path"], "(status %s)" % e["status"]); bad += 1
-for fdir in (os.path.join(root, "MarkovTriple", "BGL", "Frozen"),):   # E2: scan all subdirectories
+for fdir in (os.path.join(root, "MarkovDiffusionOperators", "BGL", "Frozen"),):   # E2: scan all subdirectories
     for dp, dn, fn in sorted(os.walk(fdir)):
         for n in sorted(fn):
             p = os.path.relpath(os.path.join(dp, n), root).replace(os.sep, "/")
@@ -57,11 +57,11 @@ def mod_to_path(m):
 def imports(path):
     out = []
     for line in open(os.path.join(root, path)):
-        mm = re.match(r"import\s+(MarkovTriple\.\S+)", line)
+        mm = re.match(r"import\s+(MarkovDiffusionOperators\.\S+)", line)
         if mm: out.append(mod_to_path(mm.group(1)))
     return out
 seen = set()
-stack = [p for p in listed if p.startswith("MarkovTriple/BGL/Frozen/")]
+stack = [p for p in listed if p.startswith("MarkovDiffusionOperators/BGL/Frozen/")]
 while stack:
     p = stack.pop()
     if p in seen: continue

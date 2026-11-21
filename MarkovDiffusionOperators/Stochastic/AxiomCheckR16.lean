@@ -1,0 +1,37 @@
+import MarkovDiffusionOperators.Stochastic.FellerKernel
+import MarkovDiffusionOperators.Stochastic.CircleFeller
+import MarkovDiffusionOperators.Stochastic.SphereFeller
+import MarkovDiffusionOperators.Stochastic.FellerStandard
+
+/-! Axiom audit of the round-16 stochastic layer (see `STATEMENTS_R16.md`). -/
+
+#print axioms MarkovDiffusionOperators.Stochastic.isFeller_of_dense
+#print axioms MarkovDiffusionOperators.Stochastic.integral_semigroup_eq
+#print axioms MarkovDiffusionOperators.Stochastic.fellerOp_add_time
+#print axioms MarkovDiffusionOperators.Stochastic.fellerOp_zero
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel
+#print axioms MarkovDiffusionOperators.Stochastic.integral_fellerKernel
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_subMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_zero
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_add
+#print axioms MarkovDiffusionOperators.Stochastic.fellerSemigroup
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_bind_le
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_rep
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_unique
+#print axioms MarkovDiffusionOperators.Stochastic.fellerOp_one
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_isMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.fellerKernel_bind
+#print axioms MarkovDiffusionOperators.Stochastic.fellerBridge
+#print axioms MarkovDiffusionOperators.Stochastic.fellerBridge_isMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.standardSemigroup_one_fin
+#print axioms MarkovDiffusionOperators.Stochastic.standardFellerBridge
+#print axioms MarkovDiffusionOperators.Stochastic.compactFellerBridge
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleKernel_continuous
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circle_isFeller
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circle_fellerKernel_eq
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circle_fellerKernel_eq'
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleFellerBridge
+#print axioms MarkovDiffusionOperators.Stochastic.Circle.circleFellerBridge_κ
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphere_isFeller
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphereBridge
+#print axioms MarkovDiffusionOperators.Stochastic.Sphere.sphereBridge_isMarkov

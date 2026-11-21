@@ -1,7 +1,7 @@
 # Hostile audit, Round 22 stream E3 (implementation commit 69dcdf9, merged into this audit commit)
 
 Verdict: ACCEPT. No HIGH or MEDIUM finding. Two LOW doc wording points, one LOW scope remark.
-Method: merged the implementation, built `MarkovTriple.Stochastic.R22.AxiomCheck` (build OK, 0 warnings, no `sorry`/`set_option`/`axiom`
+Method: merged the implementation, built `MarkovDiffusionOperators.Stochastic.R22.AxiomCheck` (build OK, 0 warnings, no `sorry`/`set_option`/`axiom`
 in `R22/*.lean`), read every line of the four Lean files and of `STATEMENTS_R22_E3.md`.
 
 ## Verified

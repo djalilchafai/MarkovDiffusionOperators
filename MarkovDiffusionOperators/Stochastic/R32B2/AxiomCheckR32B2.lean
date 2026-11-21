@@ -1,0 +1,7 @@
+import MarkovDiffusionOperators.Stochastic.R32B2.Main
+
+#print axioms MarkovDiffusionOperators.Stochastic.R32B2.pos_detect_L2
+#print axioms MarkovDiffusionOperators.Stochastic.R32B2.sqrt_form
+#print axioms MarkovDiffusionOperators.Stochastic.R32B2.weak_mono
+#print axioms MarkovDiffusionOperators.Stochastic.R32B2.reverse_integrated
+#print axioms MarkovDiffusionOperators.Stochastic.R32B2.reverse_poincare_pointwise

@@ -1,0 +1,17 @@
+import MarkovDiffusionOperators.BGL.Theory.Interp.Main
+import MarkovDiffusionOperators.BGL.Instances.Gibbs.InterpMain
+import MarkovDiffusionOperators.BGL.Instances.OU.InterpGeneric
+
+#print axioms MarkovDiffusionOperators.BGL.hasDerivAt_integral_comp
+#print axioms MarkovDiffusionOperators.BGL.hasDerivAt_pair
+#print axioms MarkovDiffusionOperators.BGL.continuous_pair
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.ibp_bdd
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasDerivAt_cK
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.hasDerivAt_uK
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.lemma3320
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.integrable_L_psi
+#print axioms MarkovDiffusionOperators.BGL.psiS_rem
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.strongInterpolation
+#print axioms MarkovDiffusionOperators.BGL.FullTriple.strong_gradient_bound_unconditional
+#print axioms MarkovDiffusionOperators.BGL.Instances.Gibbs.GibbsData.gibbsFull_strong_gradient_bound_unconditional
+#print axioms MarkovDiffusionOperators.BGL.Instances.OU.ouFull_strongInterpolation_generic

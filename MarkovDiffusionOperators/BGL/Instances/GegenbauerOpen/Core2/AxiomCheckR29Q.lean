@@ -1,0 +1,9 @@
+import MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2.Frobenius
+
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.gL_three_halves
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.gL_pow
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.gL_pow_indicial
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.pow_sq_integrable_iff
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.exponent_regular_L2
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.exponent_half_sub_lam_L2_iff
+#print axioms MarkovDiffusionOperators.BGL.Instances.GegenbauerOpen.Core2Q.exponent_three_half_sub_lam_L2_iff

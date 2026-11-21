@@ -1,6 +1,6 @@
 # FunctionalInequalities status (Phase 4)
 
-Files (MarkovTriple/FunctionalInequalities/): GapFromSquare, TripleSquare, Poincare, AxiomCheck (axioms: propext, Classical.choice, Quot.sound only).
+Files (MarkovDiffusionOperators/FunctionalInequalities/): GapFromSquare, TripleSquare, Poincare, AxiomCheck (axioms: propext, Classical.choice, Quot.sound only).
 
 Proved, no missing frozen field and no extra hypothesis:
 - `Hilbert.gap_of_square` (abstract: UnitOp R, rho*<w-Rw,Rw> <= ||w-Rw||^2 for all w  ==>  rho||Rw||^2 <= <w-Rw,Rw> for w orthogonal to {Rn=n}; continuous functional calculus only).

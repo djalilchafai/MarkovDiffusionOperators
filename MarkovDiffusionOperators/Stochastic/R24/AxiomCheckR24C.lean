@@ -1,0 +1,34 @@
+import MarkovDiffusionOperators.Stochastic.R24.OU
+import MarkovDiffusionOperators.Stochastic.R24.Bridge
+import MarkovDiffusionOperators.Stochastic.R24.Compact
+import MarkovDiffusionOperators.Stochastic.R24.Instances
+
+/-! Axiom audit of Round 24, Stream C (see `STATEMENTS_R24_C.md`). -/
+
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_subMarkov
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_integral_cc
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_zero
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_add
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_bind_le
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_rep
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelRepInf
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerSemigroupInf
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_unique
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_measurable_joint
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerMarkovProcessDataInf
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_reversible
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_bind
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerMarkovProcessBridgeInf
+#print axioms MarkovDiffusionOperators.Stochastic.R24.isFeller_iff_exists_continuous_kernel
+#print axioms MarkovDiffusionOperators.Stochastic.R24.weakFeller_kernel_unique
+#print axioms MarkovDiffusionOperators.Stochastic.R24.weakFeller_zero
+#print axioms MarkovDiffusionOperators.Stochastic.R24.weakFeller_add
+#print axioms MarkovDiffusionOperators.Stochastic.R24.isFellerC0_iff_exists_C0_kernel
+#print axioms MarkovDiffusionOperators.Stochastic.R24.isFellerC0_of_isFeller
+#print axioms MarkovDiffusionOperators.Stochastic.R24.fellerKernelInf_eq_fellerKernel
+#print axioms MarkovDiffusionOperators.Stochastic.R24.circle_isFellerC0
+#print axioms MarkovDiffusionOperators.Stochastic.R24.circle_fellerKernelInf_eq
+#print axioms MarkovDiffusionOperators.Stochastic.R24.sphere_isFellerC0
+#print axioms MarkovDiffusionOperators.Stochastic.R24.ou_isFellerC0
+#print axioms MarkovDiffusionOperators.Stochastic.R24.ou_fellerKernelInf_eq
+#print axioms MarkovDiffusionOperators.Stochastic.R24.ouMarkovProcessBridgeInf
